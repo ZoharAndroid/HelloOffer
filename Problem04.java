@@ -2,7 +2,7 @@ public class Problem04 {
 
     /**
      * 面试题4：二维数组中的查找
-     * 
+     *
      * @param matrix
      * @param number
      * @return
