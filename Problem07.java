@@ -1,6 +1,13 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 面试题7
+ *
+ * 参考：
+ * 书上测试c++代码和测试例子:
+ * https://github.com/zhedahht/CodingInterviewChinese2/blob/master/07_ConstructBinaryTree/ConstructBinaryTree.cpp
+ */
 public class Problem07 {
 
     private Map<Integer, Integer> indexForInorder = new HashMap<>();
