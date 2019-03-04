@@ -11,3 +11,5 @@
 6|[从头打印链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/Problem06.java)|链表
 7|[重建二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/Problem07.java)|树
 8|[二叉树的下一个节点](https://github.com/ZoharAndroid/HelloOffer/blob/master/Problem08.java)|树|[测试](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e?tpId=13&tqId=11210&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+9|[用两个栈实现队列](https://github.com/ZoharAndroid/HelloOffer/blob/master/Problem09.java)|栈和队列|[测试](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6?tpId=13&tqId=11158&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+9|[用两个队列实现栈](https://github.com/ZoharAndroid/HelloOffer/blob/master/Problem09_r.java)|栈和队列|
