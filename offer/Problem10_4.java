@@ -1,9 +1,11 @@
+package offer;
+
 public class Problem10_4 {
 
     /**
      * 面试题10：
      * 相关题目：覆盖矩形
-     * 
+     *
      * @param target
      * @return
      */

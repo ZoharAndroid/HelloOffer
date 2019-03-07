@@ -1,3 +1,5 @@
+package offer;
+
 public class Problem10_1 {
 
     /**

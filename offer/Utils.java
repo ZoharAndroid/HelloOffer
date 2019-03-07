@@ -1,3 +1,5 @@
+package offer;
+
 public class Utils {
     /**
      * 链表末尾添加节点

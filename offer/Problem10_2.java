@@ -1,3 +1,5 @@
+package offer;
+
 public class Problem10_2 {
     /**
      * 面试题10

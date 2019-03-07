@@ -1,3 +1,5 @@
+package offer;
+
 /**
  * 二叉树定义类
  * @author zohar.zzh
