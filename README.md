@@ -2,7 +2,7 @@
 
 剑指Offer（第2版）上面的Java代码。
 
-面试题|题目|相关知识|牛客网测试
+面试题|题目|相关知识|代码在线测试(牛客/LeetCode)
 |:-:|:-:|:-:|:-:|
 3_1|[数组中重复的数字](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem03_1.java)|数组
 3_2|[不修改数组找出找出重复的数字](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem03_2.java)|数组
@@ -20,3 +20,4 @@
 11|[旋转数组的最小值](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem11.java)|查找和排序|[测试](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba?tpId=13&tqId=11159&tPage=1&rp=4&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 12|[矩阵中的路径](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem12.java)|回溯法|[测试](https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc?tpId=13&tqId=11218&tPage=4&rp=4&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 13|[机器人的运动范围](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem13.java)|回溯法|[测试](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8?tpId=13&tqId=11219&tPage=4&rp=4&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+14|[剪绳子](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem14.java)|动态规划和贪心问题|[测试](https://leetcode-cn.com/problems/integer-break/)
