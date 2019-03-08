@@ -22,3 +22,4 @@
 13|[机器人的运动范围](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem13.java)|回溯法|[测试](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8?tpId=13&tqId=11219&tPage=4&rp=4&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 14|[剪绳子](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem14.java)|动态规划和贪心问题|[测试](https://leetcode-cn.com/problems/integer-break/)
 15|[二进制中1的个数](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem15.java)|位运算|[测试](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8?tpId=13&tqId=11164&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+16|[数值的整数次方](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem16.java)||[测试](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00?tpId=13&tqId=11165&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
