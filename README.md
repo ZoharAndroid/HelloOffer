@@ -23,3 +23,6 @@
 14|[剪绳子](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem14.java)|动态规划和贪心问题|[测试](https://leetcode-cn.com/problems/integer-break/)
 15|[二进制中1的个数](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem15.java)|位运算|[测试](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8?tpId=13&tqId=11164&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 16|[数值的整数次方](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem16.java)||[测试](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00?tpId=13&tqId=11165&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+17|[打印从1到n位的最大数](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem17.java)||
+18_1|[在O(1)时间内删除链表节点](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem18_1.java)||
+18_2|[删除链表中的重复节点](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem18_2.java)|递归|[测试](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?tpId=13&tqId=11209&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
