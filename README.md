@@ -26,3 +26,4 @@
 17|[打印从1到n位的最大数](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem17.java)||
 18_1|[在O(1)时间内删除链表节点](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem18_1.java)||
 18_2|[删除链表中的重复节点](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem18_2.java)|递归|[测试](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?tpId=13&tqId=11209&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+19|[正则表达式匹配](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem19.java)||[测试](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c?tpId=13&tqId=11205&tPage=3&rp=3&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
