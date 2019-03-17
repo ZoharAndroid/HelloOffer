@@ -15,7 +15,7 @@ public class InsertSort<T extends Comparable<T>>  extends Sort<T>{
 
     /**
      * while循环方法
-     * 
+     *
      * @param nums
      */
     @Override
