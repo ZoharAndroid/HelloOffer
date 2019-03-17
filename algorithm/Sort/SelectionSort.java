@@ -30,9 +30,11 @@ public class SelectionSort<T extends Comparable<T>> extends Sort<T> {
     }
 
 
-
-
-
+    /**
+     * 测试方法
+     *
+     * @param args
+     */
     public static void main(String[] args){
         SelectionSort sort = new SelectionSort();
         Integer[] array = new Integer[]{5,1,3,2,7,6};
