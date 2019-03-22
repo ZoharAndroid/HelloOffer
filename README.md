@@ -39,7 +39,8 @@
 28|[对称的二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem28.java)|二叉树|[测试](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb?tpId=13&tqId=11211&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 29|[顺时针打印矩阵](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem29.java)|二维数组|[测试](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a?tpId=13&tqId=11172&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 30|[包含min函数的栈](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem30.java)|栈|[测试](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49?tpId=13&tqId=11173&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
-
+31|[栈的压入、弹出序列](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem31.java)|栈|[测试](https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+32_1|[不分行从上到下打印二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem32_1.java)|二叉树|[测试](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701?tpId=13&tqId=11175&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 ## 算法
 
 
