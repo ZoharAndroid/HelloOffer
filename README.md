@@ -44,6 +44,8 @@
 32_2|[分行从上到下打印二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem32_2.java)|二叉树|[测试](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288?tpId=13&tqId=11213&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 32_3|[之字形打印二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem32_3.java)|二叉树|[测试](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0?tpId=13&tqId=11212&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 33|[二叉树搜索树的后序遍历序列](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem33.java)|二叉树|[测试](https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd?tpId=13&tqId=11176&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+34|[二叉树中和为某一值的路径](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem34.java)|二叉树|[测试](https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca?tpId=13&tqId=11177&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+35
 
 ## 算法
 
