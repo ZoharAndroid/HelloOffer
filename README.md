@@ -46,6 +46,8 @@
 33|[二叉树搜索树的后序遍历序列](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem33.java)|二叉树|[测试](https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd?tpId=13&tqId=11176&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 34|[二叉树中和为某一值的路径](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem34.java)|二叉树|[测试](https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca?tpId=13&tqId=11177&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 35|[复杂链表的复制](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem35.java)|链表|[测试](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba?tpId=13&tqId=11178&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+36|[]()|二叉树和链表|[测试](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5?tpId=13&tqId=11179&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+37|[序列化二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem37.java)|字符串和二叉树|[测试](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=13&tqId=11214&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
 ## 算法
 
