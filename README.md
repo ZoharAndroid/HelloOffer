@@ -1,5 +1,10 @@
-# HelloOffer ![](https://img.shields.io/badge/%E5%AD%A6%E4%B9%A0%E8%80%85-zohar.zzh-brightgreen.svg)
 
+# HelloOffer  
+
+<img src="https://img.shields.io/badge/%E5%AD%A6%E4%B9%A0%E8%80%85-zohar.zzh-brightgreen.svg" />
+
+
+[TOC]
 
 ## 剑指Offer（第2版）上面的Java代码。
 
@@ -49,7 +54,9 @@
 36|[]()|二叉树和链表|[测试](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5?tpId=13&tqId=11179&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 37|[序列化二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem37.java)|字符串和二叉树|[测试](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=13&tqId=11214&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-## 算法
+## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 
 
-## Android
+## [Android](https://github.com/ZoharAndroid/HelloOffer/tree/master/Android)
+
+## [Java](https://github.com/ZoharAndroid/HelloOffer/tree/master/Java)

@@ -1,3 +1,5 @@
+[TOC]
+
 # 1. 数据类型
 
 ## 1.1 基本类型
@@ -90,6 +92,149 @@ private static class IntegerCache {
         System.out.println( a == b); // false
 ```
 
+# 2 String
+
+## 2.1 String类的源码
+```
+public final class String
+    implements java.io.Serializable, Comparable<String>, CharSequence {
+        // The value is used for character storage，用字节数组进行存储
+        private final byte[] value;
+        // 编码
+        private final byte coder;
+    }
+```
+> 1. String内部用字节数组来存储字符串，使用coder来标识编码
+> 2. String类被final声明，说明String类不可以被继承
+> 3. value[]数组被final声明，说明value []数组被初始化之后，不可以改变。
+
+## 2.2 String/StringBuilder/StringBuffer
+
+### 2.2.1 StringBuilder/StringBuffer的源码
+
+StringBuilder源码：
+```
+public final class StringBuilder
+    extends AbstractStringBuilder
+    implements java.io.Serializable, CharSequence {  
+    public StringBuilder() {
+        super(16);
+    }
+}
+```
+
+StringBuffer源码：
+```
+public final class StringBuffer
+    extends AbstractStringBuilder
+    implements java.io.Serializable, CharSequence{
+        public StringBuffer() {
+        super(16);
+    }
+}
+```
+> 可以看到StringBuffer和StringBuilder都是继承了AbstractStringBuilder这个抽象类，下面看下这个AbstractStringBuilder主要是什么内容。
+
+AbstractStringBuilder源码：
+```
+abstract class AbstractStringBuilder implements Appendable, CharSequence {
+    /**
+     * The value is used for character storage.
+     */
+    byte[] value;
+
+    /**
+     * The id of the encoding used to encode the bytes in {@code value}.
+     */
+    byte coder;
+```
+> 这里也定义了字节数组和coder编码方式。但是没有用final声明。
+
+### 2.2.2 比较
+
+1. 可变性
+   * String有final修饰，说明不可变
+   * StringBuffer和StringBuilder，是可变的
+  
+2. 线程安全
+   * String不可变，说明线程安全
+   * StringBuilder，线程不安全
+   * StringBuffer，线程安全，源码可以看出（方法都用synchronized来声明，比如charAt()方法：`public synchronized char charAt(int index) {
+        return super.charAt(index);
+    }`)
+
+
+### 2.3 String Pool
+
+String Pool保存着所有字符串的字面量。下面看个例子：
+```
+public static void main(String[] args){
+        String a = new String("abc");
+        String b = new String("abc");
+        System.out.println( a == b); // false
+
+        String x = a.intern();
+        String y = a.intern();
+        System.out.println( x == y); // true
+        System.out.println( x + "  " + y);// abc  abc
+    }
+```
+> a 和 b 用new创建一个字符串对象，如果直接用两个对象进行比较，肯定是不相等的，地址不一样。而调用了`intern()`方法后，x==y说明这两个字符串对象指向的是同一个地址，也就是说明了，intern()方法首先把 a 引用的字符串放到 String Pool 中，然后返回这个字符串引用。因此 x 和 y 引用的是同一个字符串。
+
+看下`intern()`方法的源码:
+```
+/**
+     * Returns a canonical representation for the string object.
+     * <p>
+     * A pool of strings, initially empty, is maintained privately by the
+     * class {@code String}.
+     * <p>
+     * When the intern method is invoked, if the pool already contains a
+     * string equal to this {@code String} object as determined by
+     * the {@link #equals(Object)} method, then the string from the pool is
+     * returned. Otherwise, this {@code String} object is added to the
+     * pool and a reference to this {@code String} object is returned.
+     * <p>
+     * It follows that for any two strings {@code s} and {@code t},
+     * {@code s.intern() == t.intern()} is {@code true}
+     * if and only if {@code s.equals(t)} is {@code true}.
+     * <p>
+     * All literal strings and string-valued constant expressions are
+     * interned. String literals are defined in section 3.10.5 of the
+     * <cite>The Java&trade; Language Specification</cite>.
+     *
+     * @return  a string that has the same contents as this string, but is
+     *          guaranteed to be from a pool of unique strings.
+     * @jls 3.10.5 String Literals
+     */
+    public native String intern();
+```
+> 这代码的解释也说明了，当String Pool中包含了字符串的值，那么就直接返回该值，如果没有，这个字符串就会添加到String Pool中然后再返回这个值。
+
+
+如果直接采用字符串直接赋值的方式，就会自动将字符串放入String Pool中
+```
+        String m = "aaa";
+        String n = "aaa";
+        System.out.println(m == n); // true
+```
+
+## 2.4 new String("abc")方法：
+源代码：
+```
+public String(String original) {
+        this.value = original.value;
+        this.coder = original.coder;
+        this.hash = original.hash;
+    }
+```
+> `new String("abc")`并不是直接赋值一个字符串，而是将value变量指向原来的(original)value数组。
+
+
+
+
+
 ---
+参考资料：
 
 1. [CyC2018](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Java%20%E5%9F%BA%E7%A1%80.md)
