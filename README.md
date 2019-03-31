@@ -53,6 +53,7 @@
 35|[复杂链表的复制](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem35.java)|链表|[测试](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba?tpId=13&tqId=11178&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 36|[]()|二叉树和链表|[测试](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5?tpId=13&tqId=11179&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 37|[序列化二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem37.java)|字符串和二叉树|[测试](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=13&tqId=11214&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+38|[字符串的排列](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem38.java)|字符串|[测试](https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7?tpId=13&tqId=11180&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
 ## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 

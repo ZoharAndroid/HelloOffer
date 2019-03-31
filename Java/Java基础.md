@@ -230,9 +230,106 @@ public String(String original) {
 ```
 > `new String("abc")`并不是直接赋值一个字符串，而是将value变量指向原来的(original)value数组。
 
+# 3 运算相关问题
+
+## 3.1 参数传递
+
+Java方法中参数的传递是**值传递**，而不是引用传递。
+
+下面看个例子来说明是值传递。
+```
+public class chapter3_1 {
+
+    static class Dog {
+        private String name;
+
+        public Dog(String name){
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        /**
+         * 返回当前对象地址
+         *
+         * @return
+         */
+        public String getObjectAddress(){
+            return this.toString();
+        }
+    }
+
+    public static void main(String[] args){
+        Dog dog = new Dog("A");
+        System.out.println(dog.getObjectAddress());//@73035e27
+        fun(dog);
+        System.out.println(dog.getObjectAddress());//@73035e27
+        System.out.println(dog.getName());// A
+    }
+
+    private static void fun(Dog dog){
+        System.out.println(dog.getObjectAddress());//@73035e27
+        dog = new Dog("B");
+        System.out.println(dog.getObjectAddress());//@64c64813
+        System.out.println(dog.getName());// B
+    }
+}
+```
+> 可见，Dog("A")的对象dog传递给fun方法相当于一个指针变量，所以fun方法中的第一个println打印的地址和main方法中打印的地址是一样的。当fun函数让形参dog重新指向新的对象的时候Dog("B")，第二个println打印就是一个新的地址。在main()函数中虽然经过了fun方法，让dog重新指向新的地址，但是fun方法一结束，新指向的地址变量也就销毁了，main方法中的dog对象在程序后面还在使用，所以并不会销毁，所以还是指向原来的地址。
+
+```
+public static void main(String[] args){
+        Dog dog = new Dog("A");
+        fun(dog);
+        System.out.println(dog.getName());// B
 
 
+    }
 
+    private static void fun(Dog dog){
+        dog.setName("B");
+    }
+```
+> 经过上面的分析，也就可以知道fun方法修改dog对象子段在main方法中为什么输出的是B啦。因为改变的是同一个地址指向的内容。
+
+## 3.2 float与double
+
+Java不能隐士向下转型，因为会降低精度。
+
+```
+float f = 1.1;
+```
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-3-31/float%20and%20doble.png?raw=true)
+> 这里会报错，1.1属于doble类型，是不能直接从double赋值给float，因为是向下转型。
+> 如果要解决的话，就需要显示定义`float f = 1.1f;`
+
+## 3.3 隐士类型转换
+
+```
+short s1 = 1;
+// s1 = s1 + 1; 这里会进行报错，因为s1 + 1 是int类型 而s1是short类型，所以不能向下转型。
+```
+> 如果要处理必须修改为`s1 = (short) (s1+1);`
+
+## 3.4 switch
+
+switch是不支持long类型的比较的。
+```
+ long x = 111;
+        switch (x){ // Incompatible types. Found: 'long', required: 'char, byte, short, int, Character, Byte, Short, Integer, String, or an enum'
+            case 111:
+                break;
+            case 222:
+                break;
+        }
+```
+> 这里会提示，switch是无法比较long类型的变量的。
 
 ---
 参考资料：
