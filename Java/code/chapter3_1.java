@@ -38,13 +38,13 @@ public class chapter3_1 {
         short s1 = 1;
         s1 = (short)(s1 + 1);
 
-        long x = 111l;
-        switch (x){ // Incompatible types. Found: 'long', required: 'char, byte, short, int, Character, Byte, Short, Integer, String, or an enum'
-            case 111:
-                break;
-            case 222:
-                break;
-        }
+//        long x = 111l;
+//        switch (x){ // Incompatible types. Found: 'long', required: 'char, byte, short, int, Character, Byte, Short, Integer, String, or an enum'
+//            case 111:
+//                break;
+//            case 222:
+//                break;
+//        }
 
 
     }
