@@ -2,6 +2,46 @@ package Java.code;
 
 public class chapter4_1 {
 
+    class EqualsExample{
+        private int x;
+        private int y;
+        private int z;
+
+        public EqualsExample(int x, int y, int z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj){
+                return true;
+            }
+
+            if (obj == null || obj.getClass() != this.getClass()){
+                return false;
+            }
+
+            EqualsExample that = (EqualsExample)obj;
+
+            if (this.x != that.x) return  false;
+            if (this.y != that.y) return false;
+            return this.z == that.z;
+
+        }
+
+        @Override
+        public int hashCode() {
+            return super.hashCode();
+        }
+
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+            return super.clone();
+        }
+    }
+
     static class Person{
         // private String name;
         private String type;

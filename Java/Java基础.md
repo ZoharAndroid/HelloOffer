@@ -388,6 +388,108 @@ static class A{
 > 参数相同，首先寻找自己本地方法看是否有匹配的，如果没有再寻找父类的相同的方法；
 > 参数为父类对象的时候，也是寻找自己类本类的方法，然后在寻找父类中的方法。
 
+# 5 Object相关混淆点
+
+## 5.1 equals方法
+
+先看下equals源码：
+```
+public boolean equals(Object obj) {
+        return (this == obj);
+    }
+```
+> equals源码就是实现了两个对象实体进行比较。
+
+实现以下要求：
+* 检查是否为同一个对象的引用，如果是返回true
+* 检查是否为同一个类型，如果不是返回false
+* 将Object对象进行转型
+* 判断每个关键域是否相等
+
+```
+ class EqualsExample{
+        private int x;
+        private int y;
+        private int z;
+
+        public EqualsExample(int x, int y, int z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj){
+                return true;
+            }
+
+            if (obj == null || obj.getClass() != this.getClass()){
+                return false;
+            }
+
+            EqualsExample that = (EqualsExample)obj;
+
+            if (this.x != that.x) return  false;
+            if (this.y != that.y) return false;
+            return this.z == that.z;
+
+        }
+    }
+```
+
+## 5.2 clone方法
+
+复制方法：在一个构造方法中进行复制内容（深拷贝）
+```$xslt
+public class CloneConstructorExample {
+
+    private int[] arr;
+
+    public CloneConstructorExample() {
+        // 生成数据集
+        arr = new int[10];
+        for (int i = 0; i < 10; i++){
+            arr[i] = i;
+        }
+    }
+
+    /**
+     * 使用构造方法来复制一个新的数组
+     *
+     * @param original
+     */
+    public CloneConstructorExample(CloneConstructorExample original){
+        arr = new int[original.arr.length];
+        for (int i = 0; i < original.arr.length; i++){
+            arr[i] = original.arr[i];
+        }
+    }
+
+    public void set(int index, int value){
+        arr[index] = value;
+    }
+
+    public int get(int index){
+        return arr[index];
+    }
+
+    public static void main(String[] args){
+        CloneConstructorExample c1 = new CloneConstructorExample();
+        // 复制
+        CloneConstructorExample c2 = new CloneConstructorExample(c1);
+        // 修改元数组中的内容
+        c1.set(2,222);
+        //查看复制后的数组
+        System.out.println(c1.get(2)); // 222
+        System.out.println(c2.get(2)); // 2 没有发生变化，因为是新建的一个数组
+    }
+}
+```
+
+浅拷贝：就是复制的和原始的对象都是指向同一个地址，也就是同一个内容的不同引用。
+> 其方法就是重新clone方法，然后实现cloneable接口即可。
+
 ---
 参考资料：
 
