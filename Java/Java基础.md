@@ -331,6 +331,63 @@ switch是不支持long类型的比较的。
 ```
 > 这里会提示，switch是无法比较long类型的变量的。
 
+# 4 继承
+
+一个值得思考的题目
+```
+static class A{
+        public String show(D obj){
+            return "A and D";
+        }
+
+        public String show(A obj){
+            return "A and A";
+        }
+    }
+
+    static class B extends A{
+        public String show(B obj){
+            return "B and B";
+        }
+
+        public String show(A obj){
+            return "B and A";
+        }
+    }
+
+    static class C extends B{
+
+    }
+
+    static class D extends B{
+
+    }
+
+
+    public static void main(String[] args){
+        A a1 = new A();
+        A a2 = new B();
+        B b = new B();
+        C c = new C();
+        D d = new D();
+        System.out.println(a1.show(b));// A and A
+        System.out.println(a1.show(c));// A and A
+        System.out.println(a1.show(d));// A and D
+        System.out.println(a2.show(b));// B and A，这里需要注意的是要找父类的全部方法和子类共同的方法，就好理解了
+        System.out.println(a2.show(c));// B and A，同上面的理解
+        System.out.println(a2.show(d));// A and D，同上面的理解
+        System.out.println(b.show(b));// B and B
+        System.out.println(b.show(c));// B and B
+        System.out.println(b.show(d));// A and D
+```
+> 涉及到重写时，方法调用的优先级为：
+>  * this.show(O)
+>  * super.show(O)
+>  * this.show((super)O)
+>  * super.show((super)O)
+> 参数相同，首先寻找自己本地方法看是否有匹配的，如果没有再寻找父类的相同的方法；
+> 参数为父类对象的时候，也是寻找自己类本类的方法，然后在寻找父类中的方法。
+
 ---
 参考资料：
 
