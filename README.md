@@ -61,9 +61,9 @@
 43|||
 44|||
 47|[礼物的最大价值](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem47.java)||[测试](https://www.nowcoder.com/questionTerminal/72a99e28381a407991f2c96d8cb238ab)
+48|[最长不含重复字符的子字符串](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem48.java)|字符串|
 
 ## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
-
 
 ## [Android](https://github.com/ZoharAndroid/HelloOffer/tree/master/Android)
 
