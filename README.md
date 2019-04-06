@@ -60,6 +60,7 @@
 42|[连续子数组的最大和](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem42.java)|数组|[测试](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 43|||
 44|||
+47|[礼物的最大价值](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem47.java)||[测试](https://www.nowcoder.com/questionTerminal/72a99e28381a407991f2c96d8cb238ab)
 
 ## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 
