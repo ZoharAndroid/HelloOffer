@@ -62,6 +62,10 @@
 44|||
 47|[礼物的最大价值](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem47.java)||[测试](https://www.nowcoder.com/questionTerminal/72a99e28381a407991f2c96d8cb238ab)
 48|[最长不含重复字符的子字符串](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem48.java)|字符串|
+49|[丑数](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem49.java)||[测试](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+50_1|[第一次只出现一次的字符](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem50_1.java)||[测试](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&tqId=11187&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
+50_2|[字符流中第一个只出现一次的字符](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem50_2.java)||
+
 
 ## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 
