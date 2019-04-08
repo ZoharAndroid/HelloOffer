@@ -65,7 +65,7 @@
 49|[丑数](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem49.java)||[测试](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 50_1|[第一次只出现一次的字符](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem50_1.java)||[测试](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&tqId=11187&tPage=2&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking)
 50_2|[字符流中第一个只出现一次的字符](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem50_2.java)||
-
+51|[数组中的逆序对](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem51.java)|数组|[测试](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5?tpId=13&tqId=11188&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
 ## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 
