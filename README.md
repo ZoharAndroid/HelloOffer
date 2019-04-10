@@ -71,6 +71,8 @@
 53_2|[0 ~ n-1中缺失的数字](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem53_2.java)|二分查找|
 53_3|[数组中数值和下标相等的元素](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem53_3.java)|二分查找|
 54|[二叉搜索树的第k个结点](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem54.java)|二叉搜索树-中序遍历|[测试](https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&tqId=11215&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+55_1|[二叉树的深度](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem55_1.java)|二叉树|[测试](https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b?tpId=13&tqId=11191&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)|
+55_2|[]()|平衡二叉树|[测试]()
 
 ## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 
