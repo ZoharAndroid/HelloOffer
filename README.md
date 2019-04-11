@@ -75,7 +75,7 @@
 55_2|[]()|平衡二叉树|[测试]()
 67|[字符串转整数](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem67.java)|字符串|[测试](https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 68_1|[二叉搜索树的最近公共祖先](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem68_1.java)|二叉搜索树|[测试](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/submissions/)
-68_2|[二叉树的最近公共祖先](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem68_2.java)|二叉树|[测试]()
+68_2|[二叉树的最近公共祖先](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem68_2.java)|二叉树|[测试](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 ## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 
