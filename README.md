@@ -73,6 +73,9 @@
 54|[二叉搜索树的第k个结点](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem54.java)|二叉搜索树-中序遍历|[测试](https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&tqId=11215&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 55_1|[二叉树的深度](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem55_1.java)|二叉树|[测试](https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b?tpId=13&tqId=11191&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)|
 55_2|[]()|平衡二叉树|[测试]()
+67|[字符串转整数](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem67.java)|字符串|[测试](https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+68_1|[二叉搜索树的最近公共祖先](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem68_1.java)|二叉搜索树|[测试](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/submissions/)
+68_2|[二叉树的最近公共祖先](https://github.com/ZoharAndroid/HelloOffer/blob/master/offer/Problem68_2.java)|二叉树|[测试]()
 
 ## [算法](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 

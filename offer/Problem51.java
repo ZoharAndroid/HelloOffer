@@ -1,3 +1,5 @@
+package offer;
+
 public class Problem51 {
 
     public int InversePairs(int [] array) {
