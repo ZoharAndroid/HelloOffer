@@ -69,11 +69,13 @@ LeetCode中的题目练习：
 3. [118 杨辉三角](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_118.java)
 
 ### 字符串
-1. [67 二进制求和](ttps://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_67.java)
+1. [67 二进制求和](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_67.java)
 2. [28 实现strStr()](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_28.java)
 3. [14 最长公共前缀](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_14.java)
 
-### 双指针
-1. [344 反转字符串]()
-2. [561 数组拆分I]()
-3. [167 两数之和II-输入有序数组]()
+### 双指针1
+1. [344 反转字符串](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_344.java)
+2. [561 数组拆分I](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_561.java)
+3. [167 两数之和II-输入有序数组](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_167.java)
+
+### 
