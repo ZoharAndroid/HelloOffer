@@ -1,8 +1,10 @@
 # 数据结构和算法
 
+
 ## 数组和字符串
 
-### 动态数组
+[知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/array-and-string/)
+
 ```$xslt
 package algorithm.数组和字符串;
 
@@ -91,3 +93,14 @@ LeetCode中的题目练习：
 4. [557 反转字符串中的单词III](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_557.java)
 5. [26 删除排序数组中的重复项](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_26.java)
 6. [283 移动零](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/_283.java)
+
+## 队列和栈
+
+[知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/array-and-string/)
+
+队列：先入先出（FIFO），栈：后入先出（LIFO）。
+
+队列基本问题（BFS 广度优先搜索）,栈基本问题（DFS 深度优先搜索）
+
+### 先入先出的数据结构
+1. [622 设计循环队列]()
