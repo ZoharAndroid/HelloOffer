@@ -102,5 +102,11 @@ LeetCode中的题目练习：
 
 队列基本问题（BFS 广度优先搜索）,栈基本问题（DFS 深度优先搜索）
 
-### 先入先出的数据结构
-1. [622 设计循环队列]()
+### 队列：先入先出的数据结构
+1. [622 设计循环队列](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_622.java)
+
+### 队列和广度优先搜索
+1. [200 岛屿的个数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_200.java)
+
+### 栈：后入先出的数据结构
+1.[155 最小栈](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_155.jav)
