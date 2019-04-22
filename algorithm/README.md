@@ -123,5 +123,6 @@ public class ArrayTest {
 ### 小结
 1. [232 用栈实现队列](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_232.java)
 2. [225 用队列实现栈](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_225.java)
-3. []()
+3. [394 字符串解码](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_394.java)
 4. [733 图像渲染](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_733.java)
+5. [542 01 矩阵](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_542.java)
