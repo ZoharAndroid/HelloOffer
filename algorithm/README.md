@@ -132,7 +132,7 @@ public class ArrayTest {
 [知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/binary-search/208/background/)
 
 ### 背景
-1. [704 二分查找](_704.java)
-2. [69 x的平方根](_69.java)
-3. [374 猜数字大小](_374.java)
-4. [33 搜索旋转排序数组](_33.java)
+1. [704 二分查找](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_704.java)
+2. [69 x的平方根](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_69.java)
+3. [374 猜数字大小](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_374.java)
+4. [33 搜索旋转排序数组](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_33.java)
