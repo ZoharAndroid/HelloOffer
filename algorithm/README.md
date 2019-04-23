@@ -1,6 +1,5 @@
 # 数据结构和算法
 
-
 ## 数组和字符串
 
 [知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/array-and-string/)
@@ -126,3 +125,4 @@ public class ArrayTest {
 3. [394 字符串解码](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_394.java)
 4. [733 图像渲染](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_733.java)
 5. [542 01 矩阵](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_542.java)
+6. [841 钥匙和房间](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_841.java)
