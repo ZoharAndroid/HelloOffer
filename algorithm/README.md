@@ -126,3 +126,13 @@ public class ArrayTest {
 4. [733 图像渲染](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_733.java)
 5. [542 01 矩阵](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_542.java)
 6. [841 钥匙和房间](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_841.java)
+
+## 二分查找
+
+[知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/binary-search/208/background/)
+
+### 背景
+1. [704 二分查找](_704.java)
+2. [69 x的平方根](_69.java)
+3. [374 猜数字大小](_374.java)
+4. [33 搜索旋转排序数组](_33.java)
