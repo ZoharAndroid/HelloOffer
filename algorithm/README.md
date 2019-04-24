@@ -131,8 +131,53 @@ public class ArrayTest {
 
 [知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/binary-search/208/background/)
 
-### 背景
+### 二分查找模板1
+
+```
+int binarySearch(int[] nums, int target){
+  if(nums == null || nums.length == 0)
+    return -1;
+
+  int left = 0, right = nums.length - 1;
+  while(left <= right){
+    // Prevent (left + right) overflow
+    int mid = left + (right - left) / 2;
+    if(nums[mid] == target){ return mid; }
+    else if(nums[mid] < target) { left = mid + 1; }
+    else { right = mid - 1; }
+  }
+
+  // End Condition: left > right
+  return -1;
+}
+```
 1. [704 二分查找](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_704.java)
 2. [69 x的平方根](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_69.java)
 3. [374 猜数字大小](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_374.java)
 4. [33 搜索旋转排序数组](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_33.java)
+
+### 二分查找模板2
+```
+int binarySearch(int[] nums, int target){
+  if(nums == null || nums.length == 0)
+    return -1;
+
+  int left = 0, right = nums.length;
+  while(left < right){
+    // Prevent (left + right) overflow
+    int mid = left + (right - left) / 2;
+    if(nums[mid] == target){ return mid; }
+    else if(nums[mid] < target) { left = mid + 1; }
+    else { right = mid; }
+  }
+
+  // Post-processing:
+  // End Condition: left == right
+  if(left != nums.length && nums[left] == target) return left;
+  return -1;
+}
+```
+
+1. [278 第一个错误的版本](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_278.java)
+2. [162 寻找峰值](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_162.java)
+3. [153 寻找旋转排序数组中的最小值](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_153.java)
