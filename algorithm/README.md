@@ -150,6 +150,8 @@ int binarySearch(int[] nums, int target){
   // End Condition: left > right
   return -1;
 }
+
+终止条件：left > right
 ```
 1. [704 二分查找](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_704.java)
 2. [69 x的平方根](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_69.java)
@@ -176,8 +178,50 @@ int binarySearch(int[] nums, int target){
   if(left != nums.length && nums[left] == target) return left;
   return -1;
 }
+终止条件： left == right
 ```
+关键属性:
+* 一种实现二分查找的高级方法。
+* 查找条件需要访问元素的直接右邻居。
+* **使用元素的右邻居来确定是否满足条件，并决定是向左还是向右。**
+* 保证查找空间在每一步中至少有 2 个元素。
 
 1. [278 第一个错误的版本](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_278.java)
 2. [162 寻找峰值](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_162.java)
 3. [153 寻找旋转排序数组中的最小值](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_153.java)
+
+### 二分查找模板3
+```
+int binarySearch(int[] nums, int target) {
+    if (nums == null || nums.length == 0)
+        return -1;
+
+    int left = 0, right = nums.length - 1;
+    while (left + 1 < right){
+        // Prevent (left + right) overflow
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid;
+        } else {
+            right = mid;
+        }
+    }
+
+    // Post-processing:
+    // End Condition: left + 1 == right
+    if(nums[left] == target) return left;
+    if(nums[right] == target) return right;
+    return -1;
+}
+
+终止条件：left + 1 == right
+``` 
+关键属性:
+* 实现二分查找的另一种方法。
+* 搜索条件需要访问元素的直接左右邻居。
+* 使用元素的邻居来确定它是向右还是向左。
+* 保证查找空间在每个步骤中至少有 3 个元素。
+
+1. [34 在排序数组中查找元素的第一个和最后一个位置](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_34.java)
