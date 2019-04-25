@@ -225,3 +225,9 @@ int binarySearch(int[] nums, int target) {
 * 保证查找空间在每个步骤中至少有 3 个元素。
 
 1. [34 在排序数组中查找元素的第一个和最后一个位置](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_34.java)
+2. [658 找到 K 个最接近的元素](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_658.java)
+
+### 小结
+1. [50 Pow(x, n)](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_50.java)
+2. [367 有效的完全平方数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_367.java)
+3. [744 寻找比目标字母大的最小字母](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_744.ja)
