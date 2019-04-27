@@ -231,3 +231,9 @@ int binarySearch(int[] nums, int target) {
 1. [50 Pow(x, n)](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_50.java)
 2. [367 有效的完全平方数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_367.java)
 3. [744 寻找比目标字母大的最小字母](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_744.ja)
+
+### 更多练习1
+1.
+2.
+3. [349 两个数组的交集](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_349.java)
+4. [350 两个数组的交集II](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_350.java)
