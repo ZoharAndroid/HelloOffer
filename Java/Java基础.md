@@ -490,7 +490,22 @@ public class CloneConstructorExample {
 浅拷贝：就是复制的和原始的对象都是指向同一个地址，也就是同一个内容的不同引用。
 > 其方法就是重新clone方法，然后实现cloneable接口即可。
 
+# 6. 构造器Constructor是否可以被override？
+
+父类的私有属性和构造方法是不能被继承的，所以，构造方法是不能被override重写的；但是构造方法是可以进行重载的，可以看到很多类中都重载了构造方法。
+
+# 7. 重载和重写的区别？
+
+* 重载：一个类中包含了多个方法名相同，但是参数个数/参数类型/参数顺序不同。对于返回值和访问修饰可以不相同。
+* 重写：发生在父子类中，方法名和参数名、参数类型、参数顺序必须相同，返回值类型小于等于父类，访问修饰符大于等于父类。如果父类的方法访问修饰符为private，那么子类就不能重写该方法。
+
+# 8. 
+
+
+
+
 ---
 参考资料：
 
 1. [CyC2018](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Java%20%E5%9F%BA%E7%A1%80.md)
+2. [JavaGuide](https://github.com/Snailclimb/JavaGuide)
