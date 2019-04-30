@@ -234,6 +234,10 @@ int binarySearch(int[] nums, int target) {
 
 ### 更多练习1
 1.
-2.
+2. [154 寻找旋转排序数组中的最小值 II](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_154.java)
 3. [349 两个数组的交集](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_349.java)
 4. [350 两个数组的交集II](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_350.java)
+
+### 更多练习2
+1. [287 寻找重复数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_287.java)
+2. [4 寻找两个有序数组的中位数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_4.java)
