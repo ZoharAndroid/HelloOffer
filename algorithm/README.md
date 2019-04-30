@@ -246,6 +246,6 @@ int binarySearch(int[] nums, int target) {
 [知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/data-structure-binary-tree/2/traverse-a-tree/)
 
 ### 树的遍历
-1. [144 二叉树的前序遍历]()
-2. [94 二叉树的中序遍历]()
-3. [145 二叉树的后序遍历]()
+1. [144 二叉树的前序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_144.java)
+2. [94 二叉树的中序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_94.java)
+3. [145 二叉树的后序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_145.java)
