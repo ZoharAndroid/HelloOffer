@@ -241,3 +241,11 @@ int binarySearch(int[] nums, int target) {
 ### 更多练习2
 1. [287 寻找重复数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_287.java)
 2. [4 寻找两个有序数组的中位数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_4.java)
+
+## 树
+[知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/data-structure-binary-tree/2/traverse-a-tree/)
+
+### 树的遍历
+1. [144 二叉树的前序遍历]()
+2. [94 二叉树的中序遍历]()
+3. [145 二叉树的后序遍历]()
