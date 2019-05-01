@@ -249,3 +249,8 @@ int binarySearch(int[] nums, int target) {
 1. [144 二叉树的前序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_144.java)
 2. [94 二叉树的中序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_94.java)
 3. [145 二叉树的后序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_145.java)
+4. [102 二叉树的层次遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_102.java)
+
+### 运用递归解决问题
+1. [104 二叉树的最大深度](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_104.java)
+2. [101 对称二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_101.java)
