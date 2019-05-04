@@ -1,3 +1,6 @@
+
+[toc]
+
 # 数据结构和算法
 
 ## 数组和字符串
@@ -254,3 +257,9 @@ int binarySearch(int[] nums, int target) {
 ### 运用递归解决问题
 1. [104 二叉树的最大深度](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_104.java)
 2. [101 对称二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_101.java)
+3. [112 路径总和](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_112.java)
+
+### 总结
+1. [106 从中序与后序遍历序列构造二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_106.java)
+2. [105 从前序与中序遍历序列构造二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_105.java)
+3. [236 二叉树的最近公共祖先](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_236.java)
