@@ -1,5 +1,29 @@
 
-[toc]
+* [数据结构和算法](#数据结构和算法 )
+	* [数组和字符串](#数组和字符串 )
+		* [数组](#数组 )
+		* [二维数组](#二维数组 )
+		* [字符串](#字符串 )
+		* [双指针1](#双指针1 )
+		* [双指针2](#双指针2 )
+		* [本章小结](#本章小结 )
+	* [队列和栈](#队列和栈 )
+		* [队列：先入先出的数据结构](#队列先入先出的数据结构 )
+		* [队列和广度优先搜索](#队列和广度优先搜索 )
+		* [栈：后入先出的数据结构](#栈后入先出的数据结构 )
+		* [栈和深度优先搜索](#栈和深度优先搜索 )
+		* [小结](#小结 )
+	* [二分查找](#二分查找 )
+		* [二分查找模板1](#二分查找模板1 )
+		* [二分查找模板2](#二分查找模板2 )
+		* [二分查找模板3](#二分查找模板3 )
+		* [小结](#小结-1 )
+		* [更多练习1](#更多练习1 )
+		* [更多练习2](#更多练习2 )
+	* [树](#树 )
+		* [树的遍历](#树的遍历 )
+		* [运用递归解决问题](#运用递归解决问题 )
+		* [总结](#总结 )
 
 # 数据结构和算法
 
@@ -118,11 +142,13 @@ public class ArrayTest {
 4. [150 逆波兰表达式求值](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_150.java)
 
 ### 栈和深度优先搜索
+
 1. [200 岛屿的个数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_200.java)
 2. [133 克隆图](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_133.java)
 3. [494 目标和](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_494.java)
 
 ### 小结
+
 1. [232 用栈实现队列](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_232.java)
 2. [225 用队列实现栈](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_225.java)
 3. [394 字符串解码](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88/_394.java)
@@ -156,12 +182,14 @@ int binarySearch(int[] nums, int target){
 
 终止条件：left > right
 ```
+
 1. [704 二分查找](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_704.java)
 2. [69 x的平方根](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_69.java)
 3. [374 猜数字大小](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_374.java)
 4. [33 搜索旋转排序数组](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_33.java)
 
 ### 二分查找模板2
+
 ```
 int binarySearch(int[] nums, int target){
   if(nums == null || nums.length == 0)
@@ -183,7 +211,9 @@ int binarySearch(int[] nums, int target){
 }
 终止条件： left == right
 ```
+
 关键属性:
+
 * 一种实现二分查找的高级方法。
 * 查找条件需要访问元素的直接右邻居。
 * **使用元素的右邻居来确定是否满足条件，并决定是向左还是向右。**
@@ -194,6 +224,7 @@ int binarySearch(int[] nums, int target){
 3. [153 寻找旋转排序数组中的最小值](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_153.java)
 
 ### 二分查找模板3
+
 ```
 int binarySearch(int[] nums, int target) {
     if (nums == null || nums.length == 0)
@@ -221,7 +252,9 @@ int binarySearch(int[] nums, int target) {
 
 终止条件：left + 1 == right
 ``` 
+
 关键属性:
+
 * 实现二分查找的另一种方法。
 * 搜索条件需要访问元素的直接左右邻居。
 * 使用元素的邻居来确定它是向右还是向左。
@@ -231,38 +264,44 @@ int binarySearch(int[] nums, int target) {
 2. [658 找到 K 个最接近的元素](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_658.java)
 
 ### 小结
+
 1. [50 Pow(x, n)](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_50.java)
 2. [367 有效的完全平方数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_367.java)
 3. [744 寻找比目标字母大的最小字母](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_744.ja)
 
 ### 更多练习1
+
 1.
 2. [154 寻找旋转排序数组中的最小值 II](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_154.java)
 3. [349 两个数组的交集](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_349.java)
 4. [350 两个数组的交集II](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_350.java)
 
 ### 更多练习2
+
 1. [287 寻找重复数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_287.java)
 2. [4 寻找两个有序数组的中位数](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/_4.java)
 
 ## 树
+
 [知识储备/学习链接](https://leetcode-cn.com/explore/learn/card/data-structure-binary-tree/2/traverse-a-tree/)
 
 ### 树的遍历
+
 1. [144 二叉树的前序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_144.java)
 2. [94 二叉树的中序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_94.java)
 3. [145 二叉树的后序遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_145.java)
 4. [102 二叉树的层次遍历](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_102.java)
 
 ### 运用递归解决问题
+
 1. [104 二叉树的最大深度](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_104.java)
 2. [101 对称二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_101.java)
 3. [112 路径总和](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_112.java)
 
 ### 总结
+
 1. [106 从中序与后序遍历序列构造二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_106.java)
 2. [105 从前序与中序遍历序列构造二叉树](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_105.java)
 3. [236 二叉树的最近公共祖先](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_236.java)
 4. [116 填充每个节点的下一个右侧节点指针](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_116.java)
 5. [117 填充每个节点的下一个右侧节点指针II](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_117.java)
-6. [297 二叉树的序列化与反序列化](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E6%A0%91/_297.java)
