@@ -13,6 +13,12 @@
 
 [算法以及题目](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm)
 
+* [数组和字符串]
+* [队列和栈]
+* [树]
+* [链表]
+* [二叉树]
+
 ## Android
 
 [Android相关知识](https://github.com/ZoharAndroid/HelloOffer/tree/master/Android)
