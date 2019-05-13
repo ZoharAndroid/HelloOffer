@@ -13,4 +13,5 @@
 > 用于判断链表中是否有环
 1. [141 环形链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_141.java)
 2. [141 环形链表 II](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_142.java)
+3. [160. 相交链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_160.java)
 
