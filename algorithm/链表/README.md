@@ -18,5 +18,6 @@
 
 ## 经典问题
 1. [206 反转链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_206.java)
-
+2. [203 移除链表元素](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_203.java)
+3. [328 奇偶链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_328.java)
 
