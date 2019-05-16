@@ -20,4 +20,8 @@
 1. [206 反转链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_206.java)
 2. [203 移除链表元素](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_203.java)
 3. [328 奇偶链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_328.java)
+4. [234 回文链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_234.java)
 
+## 小结
+1. [21 合并两个有序链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_21.java)
+2. [2 两数相加](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/%E9%93%BE%E8%A1%A8/_2.java)
