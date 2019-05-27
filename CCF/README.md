@@ -4,3 +4,4 @@
 |:-:|:-:|:-:|
 201903-1|[小中大](http://118.190.20.162/view.page?gpid=T89)|[代码](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201903/_1/Main.java)
 201812-1|[小明上学](http://118.190.20.162/view.page?gpid=T80)|[代码](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201812/_1/Main.java)
+201809-1|[	卖菜](http://118.190.20.162/view.page?gpid=T79)|[代码](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201809/_1/Main.java)
