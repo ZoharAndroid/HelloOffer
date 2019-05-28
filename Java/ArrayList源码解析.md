@@ -139,29 +139,32 @@ public class ArrayList<E> extends AbstractList<E>
             grow(minCapacity);
     }
 
-    /**
-     * The maximum size of array to allocate.
-     * Some VMs reserve some header words in an array.
-     * Attempts to allocate larger arrays may result in
-     * OutOfMemoryError: Requested array size exceeds VM limit
-     */
+    // 最大可分配数组大小
     private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 
     /**
-     * Increases the capacity to ensure that it can hold at least the
-     * number of elements specified by the minimum capacity argument.
-     *
+     * 扩容主要方法
+     * 增加容量，以确保它至少可以容纳由minimum capacity参数指定的元素数。
      * @param minCapacity the desired minimum capacity
      */
     private void grow(int minCapacity) {
         // overflow-conscious code
-        int oldCapacity = elementData.length;
+        int oldCapacity = elementData.length;  // 原来设定的容量
+        // 新容量大小设定为原来容量大小的1.5倍
         int newCapacity = oldCapacity + (oldCapacity >> 1);
+        // 如果新设定的容量比最小需要容量还小，那么就把新容量设定为最小需要容量
         if (newCapacity - minCapacity < 0)
             newCapacity = minCapacity;
+        // 如果新设定的容量超过了最大数组容量，
+        // 就需要通过hugeCapacity()来调整新设定的容量。
+        // hugeCapacity()方法是比较minCapacity和MAX_ARRAY_SIZE的大小。
+        // 如果minCapacity为负数，抛出OOM异常；如果minCapacity大于
+        // MAX_ARRAY_SIZE则将新容量大小设置为Integer.MAX_VALUE，
+        // minCapacity小于MAX_ARRAY_SIZE则设定为MAX_ARRAY_SIZE。
         if (newCapacity - MAX_ARRAY_SIZE > 0)
             newCapacity = hugeCapacity(minCapacity);
         // minCapacity is usually close to size, so this is a win:
+        // 将元素数组复制到新设定的容量上
         elementData = Arrays.copyOf(elementData, newCapacity);
     }
 
@@ -173,64 +176,43 @@ public class ArrayList<E> extends AbstractList<E>
             MAX_ARRAY_SIZE;
     }
 
-    /**
-     * Returns the number of elements in this list.
-     *
-     * @return the number of elements in this list
-     */
+    // 返回list中的个数
     public int size() {
         return size;
     }
 
-    /**
-     * Returns <tt>true</tt> if this list contains no elements.
-     *
-     * @return <tt>true</tt> if this list contains no elements
-     */
+   // 判断list中是否为空，也就是通过size是否为0来判断
     public boolean isEmpty() {
         return size == 0;
     }
 
-    /**
-     * Returns <tt>true</tt> if this list contains the specified element.
-     * More formally, returns <tt>true</tt> if and only if this list contains
-     * at least one element <tt>e</tt> such that
-     * <tt>(o==null&nbsp;?&nbsp;e==null&nbsp;:&nbsp;o.equals(e))</tt>.
-     *
-     * @param o element whose presence in this list is to be tested
-     * @return <tt>true</tt> if this list contains the specified element
-     */
+    // 返回list中是否包含o对象
     public boolean contains(Object o) {
+        // 调用indexOf()方法，查看list中首次出现o对象的索引，如果没有
+        // 那么indexOf方法就会返回-1，所以也就会返回false，如果list中
+        // 包含了o对象，那么就返回true
         return indexOf(o) >= 0;
     }
 
-    /**
-     * Returns the index of the first occurrence of the specified element
-     * in this list, or -1 if this list does not contain the element.
-     * More formally, returns the lowest index <tt>i</tt> such that
-     * <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>,
-     * or -1 if there is no such index.
-     */
+    // 返回list中指定对象第一次出现的索引。
     public int indexOf(Object o) {
         if (o == null) {
+            // 如果要查询的对象为null，遍历元素对象数组
             for (int i = 0; i < size; i++)
                 if (elementData[i]==null)
                     return i;
         } else {
+            // 要查询的对象不是null，用equals方法判断对象是否相同。
             for (int i = 0; i < size; i++)
                 if (o.equals(elementData[i]))
                     return i;
         }
+        // 没有查询到，那么返回-1
         return -1;
     }
 
-    /**
-     * Returns the index of the last occurrence of the specified element
-     * in this list, or -1 if this list does not contain the element.
-     * More formally, returns the highest index <tt>i</tt> such that
-     * <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>,
-     * or -1 if there is no such index.
-     */
+    // List中最后一次出现的索引位置，如果没有，则返回-1。
+    // 基本思想就是从后往前进行遍历
     public int lastIndexOf(Object o) {
         if (o == null) {
             for (int i = size-1; i >= 0; i--)
@@ -245,14 +227,12 @@ public class ArrayList<E> extends AbstractList<E>
     }
 
     /**
-     * Returns a shallow copy of this <tt>ArrayList</tt> instance.  (The
-     * elements themselves are not copied.)
-     *
-     * @return a clone of this <tt>ArrayList</tt> instance
+     * 返回此ArrayList实例的浅拷贝。（元素本身不会被复制。）
      */
     public Object clone() {
         try {
             ArrayList<?> v = (ArrayList<?>) super.clone();
+            // 通过Arrays.copyOf方法复制size个元素对象数组到v元素数组中
             v.elementData = Arrays.copyOf(elementData, size);
             v.modCount = 0;
             return v;
@@ -263,65 +243,41 @@ public class ArrayList<E> extends AbstractList<E>
     }
 
     /**
-     * Returns an array containing all of the elements in this list
-     * in proper sequence (from first to last element).
-     *
-     * <p>The returned array will be "safe" in that no references to it are
-     * maintained by this list.  (In other words, this method must allocate
-     * a new array).  The caller is thus free to modify the returned array.
-     *
-     * <p>This method acts as bridge between array-based and collection-based
-     * APIs.
-     *
-     * @return an array containing all of the elements in this list in
-     *         proper sequence
+     *以适当的顺序（从第一个元素到最后一个元素）返回包含此列表中所有元素的数
+     *组。
+     *   
+     *返回的数组将是“安全的”，因为此列表不会保留对它的引用。 （换句话说，此方
+     *法必须分配一个新数组）。 因此调用者可以自由修改返回的数组。
+     *
+     *此方法充当基于数组和基于集合的API之间的桥梁。
+     *
+     *@return一个数组，按正确顺序包含此列表中的所有元素
      */
     public Object[] toArray() {
         return Arrays.copyOf(elementData, size);
     }
 
     /**
-     * Returns an array containing all of the elements in this list in proper
-     * sequence (from first to last element); the runtime type of the returned
-     * array is that of the specified array.  If the list fits in the
-     * specified array, it is returned therein.  Otherwise, a new array is
-     * allocated with the runtime type of the specified array and the size of
-     * this list.
-     *
-     * <p>If the list fits in the specified array with room to spare
-     * (i.e., the array has more elements than the list), the element in
-     * the array immediately following the end of the collection is set to
-     * <tt>null</tt>.  (This is useful in determining the length of the
-     * list <i>only</i> if the caller knows that the list does not contain
-     * any null elements.)
-     *
-     * @param a the array into which the elements of the list are to
-     *          be stored, if it is big enough; otherwise, a new array of the
-     *          same runtime type is allocated for this purpose.
-     * @return an array containing the elements of the list
-     * @throws ArrayStoreException if the runtime type of the specified array
-     *         is not a supertype of the runtime type of every element in
-     *         this list
-     * @throws NullPointerException if the specified array is null
+     * 以正确的顺序返回一个包含此列表中所有元素的数组（从第一个到最后一个元素）; 
+     *返回的数组的运行时类型是指定数组的运行时类型。 如果列表适合指定的数组，则返回其中。 
+     *否则，将为指定数组的运行时类型和此列表的大小分配一个新数组。 
+     *如果列表适用于指定的数组，其余空间（即数组的列表数量多于此元素），则紧跟在集合结束后的数组中的元素设置为null 。
+     *（这仅在调用者知道列表不包含任何空元素的情况下才能确定列表的长度。）
      */
     @SuppressWarnings("unchecked")
     public <T> T[] toArray(T[] a) {
         if (a.length < size)
-            // Make a new array of a's runtime type, but my contents:
+            // 创建一个新的运行时数组，内容是ArrayList的内容
             return (T[]) Arrays.copyOf(elementData, size, a.getClass());
+        // 调用系统的arrayCopy方法复制数组
         System.arraycopy(elementData, 0, a, 0, size);
+        // 数组元素多于ArraryList中的元素，你妈在size后面设置为null
         if (a.length > size)
             a[size] = null;
         return a;
     }
 
-    /**
-     * Returns the element at the specified position in this list.
-     *
-     * @param  index index of the element to return
-     * @return the element at the specified position in this list
-     * @throws IndexOutOfBoundsException {@inheritDoc}
-     */
+    // 返回指定索引位置的元素对象，如果索引超过ArrayList中元素的个数，那么抛出IndexOutOfBoundsException
     public E get(int index) {
         if (index >= size)
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
@@ -329,15 +285,7 @@ public class ArrayList<E> extends AbstractList<E>
         return (E) elementData[index];
     }
 
-    /**
-     * Replaces the element at the specified position in this list with
-     * the specified element.
-     *
-     * @param index index of the element to replace
-     * @param element element to be stored at the specified position
-     * @return the element previously at the specified position
-     * @throws IndexOutOfBoundsException {@inheritDoc}
-     */
+    // 指定索引位置替换成新的元素对象，并返回原来索引位置的元素对象
     public E set(int index, E element) {
         if (index >= size)
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
@@ -347,32 +295,21 @@ public class ArrayList<E> extends AbstractList<E>
         return oldValue;
     }
 
-    /**
-     * Appends the specified element to the end of this list.
-     *
-     * @param e element to be appended to this list
-     * @return <tt>true</tt> (as specified by {@link Collection#add})
-     */
+    // 在数组末尾添加元素对象
     public boolean add(E e) {
+        // 每增加1次，当数组元素大于默认值的时候，就会调用grow方法进行扩容操作
         ensureCapacityInternal(size + 1);  // Increments modCount!!
         elementData[size++] = e;
         return true;
     }
 
-    /**
-     * Inserts the specified element at the specified position in this
-     * list. Shifts the element currently at that position (if any) and
-     * any subsequent elements to the right (adds one to their indices).
-     *
-     * @param index index at which the specified element is to be inserted
-     * @param element element to be inserted
-     * @throws IndexOutOfBoundsException {@inheritDoc}
-     */
+    // 指定索引位置添加指定元素对象
     public void add(int index, E element) {
         if (index > size || index < 0)
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
-
+        // 确保容量大小能够储存指定对象，否则进行扩容操作
         ensureCapacityInternal(size + 1);  // Increments modCount!!
+        // 调用System.arraycopy方法将index之后的元素向后移动1位
         System.arraycopy(elementData, index, elementData, index + 1,
                          size - index);
         elementData[index] = element;
