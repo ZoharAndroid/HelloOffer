@@ -30,6 +30,7 @@
 - [15. final关键字总结](#15-final%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93)
 - [16. static关键字总结](#16-static%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93)
 - [17. this、super关键字总结](#17-thissuper%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93)
+- [18. 关于自动装箱、拆箱的一个代码思考？](#18-%E5%85%B3%E4%BA%8E%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E6%8B%86%E7%AE%B1%E7%9A%84%E4%B8%80%E4%B8%AA%E4%BB%A3%E7%A0%81%E6%80%9D%E8%80%83)
 
 # 1. 数据类型
 
@@ -590,6 +591,31 @@ public class CloneConstructorExample {
 * this：指的是对象本身。
 * super：指的是子类调用的父类对象，也就是父类对象。
 
+# 18. 关于自动装箱、拆箱的一个代码思考？
+
+```java
+public class Main{
+public static void main(String[] args){
+        Integer a = 1;
+        Integer b = 2;
+        Integer c = 3;
+        Integer d = 3;
+        Integer e = 321;
+        Integer f = 321;
+        Long g = 3L;
+        long h = 3L;
+        System.out.println(c == d); // true
+        System.out.println(e == f); // false
+        System.out.println(c == (a + b)); // true , 这里遇到了算术运算会自动进行拆箱
+        System.out.println(c.equals(a+b)); // true
+        System.out.println(g == ( a + b)); // true
+        System.out.println(g.equals(a+b)); // false，equals方法不会进行数据类型转换
+        System.out.println(c == h); // true
+    }
+}
+```
+> 包装类的"=="运算在不遇到算术运算的情况下，不会自动拆箱;
+> equals()方法不处理数据转型
 
 ---
 参考资料：
