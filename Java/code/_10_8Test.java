@@ -18,5 +18,12 @@ public class _10_8Test {
         System.out.println(g == ( a + b)); // true
         System.out.println(g.equals(a+b)); // false
         System.out.println(c == h); // true
+
+        System.out.println(1<<30);
+        System.out.println(1<<31);
+        System.out.println(1<<32);
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.toBinaryString(1<<30));
+        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
     }
 }
