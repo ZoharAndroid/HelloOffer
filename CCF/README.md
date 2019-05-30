@@ -11,3 +11,7 @@
 201703-1|[分蛋糕](http://118.190.20.162/view.page?gpid=T57)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201703/_1/Main.java)
 201612-1|[中间数](http://118.190.20.162/view.page?gpid=T52)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201612/_1/Main.java)
 201609-1|[最大波动](http://118.190.20.162/view.page?gpid=T47)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201609/_1/Main.java)
+201604-1|[折点计数](http://118.190.20.162/view.page?gpid=T42)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201604/_1/Main.java)
+201512-1|[数位之和](http://118.190.20.162/view.page?gpid=T37)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201512/_1/Main.java)
+201509-1|[数列分段](http://118.190.20.162/view.page?gpid=T32)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201509/_1/Main.java)
+201503-1|[图像旋转](http://118.190.20.162/view.page?gpid=T27)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201503/_1/Main.java)
