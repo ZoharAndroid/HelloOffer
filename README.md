@@ -25,11 +25,11 @@
 * 字符串：字典树、后缀树
 
 **知识解析**
-* [数组和字符串](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2)
-* [队列和栈](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm/%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88)
-* [树](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm/%E6%A0%91)
-* [链表](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm/%E9%93%BE%E8%A1%A8)
-* [二分查找](https://github.com/ZoharAndroid/HelloOffer/tree/master/algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)
+* [数组和字符串](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/数组和字符串/README.md)
+* [队列和栈](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/队列和栈/README.md)
+* [树](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/树/README.md)
+* [链表](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/链表/README.md)
+* [二分查找](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/二分查找/README.md)
 
 ## Android
 
