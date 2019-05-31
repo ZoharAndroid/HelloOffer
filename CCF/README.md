@@ -15,3 +15,7 @@
 201512-1|[数位之和](http://118.190.20.162/view.page?gpid=T37)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201512/_1/Main.java)
 201509-1|[数列分段](http://118.190.20.162/view.page?gpid=T32)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201509/_1/Main.java)
 201503-1|[图像旋转](http://118.190.20.162/view.page?gpid=T27)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201503/_1/Main.java)
+201412-1|[门禁系统](http://118.190.20.162/view.page?gpid=T21)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201412/_1/Main.java)
+201409-1|[相邻数对](http://118.190.20.162/view.page?gpid=T16)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201409/_1/Main.java)
+201403-1|[相反数](http://118.190.20.162/view.page?gpid=T10)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201403/_1/Main.java)
+201312-1|[出现次数最多的数](http://118.190.20.162/view.page?gpid=T5)|[代码与思路](https://github.com/ZoharAndroid/HelloOffer/blob/master/CCF/_201312/_1/Main.java)
