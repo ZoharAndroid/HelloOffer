@@ -156,3 +156,63 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
         return null;
     }
 ```
+
+## 底层数据结构分析
+
+### JDK1.8之前
+
+JDK1.8之前HashMap底层使用的是**数组和链表**的结合，也就是**拉链法**。HashMap通过Key的hashcode经过**扰动函数**处理后得到hash值，然后通过<kbd>(n-1) & hash</kbd>判断当前元素存放的位置（n为数组的长度）。如果当前位置存在元素的话，就判断该元素与要存入的元素的hash值以及key值判断是否相同，如果相同，直接覆盖，不相同就通过拉链法解决冲突。
+
+**扰动函数**就是指HashMap的hash方法。只要是防止一些效果较差的hashcode()方法，减少碰撞。
+
+```java
+static final int hash(Object key) {
+        int h;
+        // key.hashcode：返回hash值
+        // >>> ：无符号右移，空位以0补位
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+    }
+```
+
+**拉链法**：将链表和数组结合。数组的每一格对应一个链表。如果遇到哈希冲突，然后将冲突的值加到链表中即可。
+![](https://camo.githubusercontent.com/eec1c575aa5ff57906dd9c9130ec7a82e212c96a/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031382f332f32302f313632343064626363333033643837323f773d33343826683d34323726663d706e6726733d3130393931)
+
+### JDK1.8之后
+
+主要在解决哈希冲突有了较大的变化，当链表长度大于阈值（默认值为8）时，将链表转化为红黑树，以减少搜索时间。
+![](https://camo.githubusercontent.com/20de7e465cac279842851258ec4d1ec1c4d3d7d1/687474703a2f2f6d792d626c6f672d746f2d7573652e6f73732d636e2d6265696a696e672e616c6979756e63732e636f6d2f31382d382d32322f36373233333736342e6a7067)
+
+### 类的属性
+
+```java
+public class HashMap<K,V> extends AbstractMap<K,V>
+    implements Map<K,V>, Cloneable, Serializable {
+    // 序列号
+    private static final long serialVersionUID = 362498820763181265L;
+    // 默认初始容量为16
+    static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
+    // 最大容量为2^30
+    static final int MAXIMUM_CAPACITY = 1 << 30;
+    // 默认的填充因子为0.75f
+    static final float DEFAULT_LOAD_FACTOR = 0.75f;
+    // 当桶的节点大于8的时候会转换成红黑树
+    static final int TREEIFY_THRESHOLD = 8;
+    // 当桶上的节点小于这个值的时候会转换成链表
+    static final int UNTREEIFY_THRESHOLD = 6;
+    // 桶中结构转化为红黑树对应的table的最小容量
+    static final int MIN_TREEIFY_CAPACITY = 64;
+    // 节点数组，数量总是2的幂次方
+    transient Node<K,V>[] table;
+    // 存放具体的元素集合
+    transient Set<Map.Entry<K,V>> entrySet;
+    // 存放元素的个数
+    transient int size;
+    // 每次扩容和更改map结构的计数器
+    transient int modCount;
+    // 临界值，当超过临界值（容量*填充因子)时，或进行扩容
+    int threshold;
+    // 加载因子
+    final float loadFactor;
+}
+
+```
