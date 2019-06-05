@@ -216,3 +216,83 @@ public class HashMap<K,V> extends AbstractMap<K,V>
 }
 
 ```
+* loadFactor加载因子
+  
+  控制数组存放数据的疏密程度，loadFactor越趋近于1，那么，数组中存放的数据也就越多，相反，越趋近于0，数组中存放的数据也就越少。
+
+  loadFactor太大会导致查找效率低，太小导致数组利用率低，loadFactor默认值为0.75f。
+
+  默认容量为16，负载因子为0.75f，当数量达到 16 * 0.75 = 12就需要将当前16的容量进行扩容。
+
+* threshold
+  **threshold = capacity * loadFactory**， 当size >= threshold的时候，就要考虑扩容了。
+
+
+### Node代码
+```java
+// 实现了 Map.Entry<K,V>
+static class Node<K,V> implements Map.Entry<K,V> {
+        final int hash; // hash值
+        final K key; // 键值
+        V value;    // value
+        Node<K,V> next; // 下一个节点
+
+        Node(int hash, K key, V value, Node<K,V> next) {
+            this.hash = hash;
+            this.key = key;
+            this.value = value;
+            this.next = next;
+        }
+
+        public final K getKey()        { return key; }
+        public final V getValue()      { return value; }
+        public final String toString() { return key + "=" + value; }
+        // hashCode方法，就是key和value两者的哈希码异或
+        public final int hashCode() {
+            return Objects.hashCode(key) ^ Objects.hashCode(value);
+        }
+        // 设置新的value，并返回老的value值
+        public final V setValue(V newValue) {
+            V oldValue = value;
+            value = newValue;
+            return oldValue;
+        }
+        // 重写equals方法
+        public final boolean equals(Object o) {
+            if (o == this)
+                // 如果当前对象就是本身，则直接返回true
+                return true;
+            if (o instanceof Map.Entry) {
+                // 如果类型是Map.Entry，那么强制转换成Map.Entry类型
+                Map.Entry<?,?> e = (Map.Entry<?,?>)o;
+                // 然后调用Object的equals方法来比较key和value两者是否是相等的
+                if (Objects.equals(key, e.getKey()) &&
+                    Objects.equals(value, e.getValue()))
+                    return true;
+            }
+            return false;
+        }
+    }
+```
+
+### TrreNode树节点源码
+```java
+ static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V> {
+        TreeNode<K,V> parent;  // red-black tree links 红黑树，父节点
+        TreeNode<K,V> left; // 左节点
+        TreeNode<K,V> right; // 右节点
+        TreeNode<K,V> prev;    // needed to unlink next upon deletion
+        boolean red;    // 判断颜色
+        // 默认构造函数
+        TreeNode(int hash, K key, V val, Node<K,V> next) {
+            super(hash, key, val, next);
+        }
+        // 返回根节点
+        final TreeNode<K,V> root() {
+            for (TreeNode<K,V> r = this, p;;) {
+                if ((p = r.parent) == null)
+                    return r;
+                r = p;
+            }
+        }
+```
