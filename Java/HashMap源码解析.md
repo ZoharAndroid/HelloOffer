@@ -1,7 +1,17 @@
 
 # HashMap源码解析
 
-[toc]
+* [HashMap源码解析](#hashmap源码解析 )
+* [HashMap初识](#hashmap初识 )
+* [HashMap源码分解](#hashmap源码分解 )
+	* [构造方法](#构造方法 )
+	* [put方法](#put方法 )
+	* [底层数据结构分析](#底层数据结构分析 )
+		* [JDK1.8之前](#jdk18之前 )
+		* [JDK1.8之后](#jdk18之后 )
+		* [类的属性](#类的属性 )
+		* [Node代码](#node代码 )
+		* [TrreNode树节点源码](#trrenode树节点源码 )
 
 # HashMap初识
 
