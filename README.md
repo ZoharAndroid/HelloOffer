@@ -9,7 +9,7 @@
 
 ## 算法和数据结构
 
-[数据结构和算法/练习题目]()
+[数据结构和算法/练习题目](https://github.com/ZoharAndroid/HelloOffer/blob/master/algorithm/README.md)
 
 ## Android
 
