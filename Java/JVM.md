@@ -34,6 +34,13 @@
         - [2.3.3. 标记-整理算法](#233-标记-整理算法)
         - [2.3.4. 分代收集算法](#234-分代收集算法)
     - [2.4. 垃圾收集器](#24-垃圾收集器)
+        - [2.4.1. Serial收集器](#241-serial收集器)
+        - [2.4.2. ParNew收集器](#242-parnew收集器)
+        - [2.4.3. Parallel Scavenge收集器](#243-parallel-scavenge收集器)
+        - [2.4.4. Serial Old收集器](#244-serial-old收集器)
+        - [2.4.5. Parallel Old收集器](#245-parallel-old收集器)
+        - [2.4.6. CMS收集器](#246-cms收集器)
+        - [2.4.7. G1收集器](#247-g1收集器)
 
 <!-- /TOC -->
 
@@ -307,7 +314,7 @@ public class ReferenceCouningGC {
 
 当对象没有覆盖finalize()方法，或者finalize()方法已经被虚拟机调用过，虚拟机将这两种情况都视为“没有必要执行”筛选。
 
-当对象被判定有必要执行finalize()方法，那么这个对象将会放置在一个F-Queue队列之中进行二次标记，如果对象没有在finalize()方法中与引用链上的任何一个建立关联（如把自己this赋值给某个类变量或者对象的成员变量），那么第二次标记时该对象将会被回收。
+当对象被判定有必要执行finalize()方法，那么这个对象将会放置在一个F-Queue队列之中进行二次标记，如果对象没有在finalize()方法中与引用链上的任何一个对象建立关联（如把自己this赋值给某个类变量或者对象的成员变量），那么第二次标记时该对象将会被回收。finalize()方法是对象逃脱死亡命运的最后一次机会。任何一个对象的finalize()方法只能被系统调用一次。
 
 ### 2.2.5. 如何判断一个常量是废弃常量？
 
@@ -365,6 +372,47 @@ public class ReferenceCouningGC {
 
 
 ## 2.4. 垃圾收集器
+
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8.png?raw=true)
+
+如果说垃圾收集算法是内存回收的方法论，那么垃圾收集器就是内存回收的具体实现。现在没有万能的垃圾收集器，只能选得对具体应用最合适的收集器。
+
+这里要区分这些收集器处于新生代还是老年代。
+
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86%E5%99%A8.png?raw=true)
+
+### 2.4.1. Serial收集器
+
+Serial收集器是一个单线程的收集器，它的“单线程”的意义并不仅仅说明它只会使用一个CPU或一条收集线程去完成垃圾收集工作，更重要的是它在进行垃圾收集时，必须暂停其他所有的工作线程，直到它收集结束。
+
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/Serial.png?raw=true)
+
+新生代采用复制算法，老年代采用Serial Old收集器使用标记-整理算法。
+
+优势：**简答而高效（与其他收集器的单线程比）**，对于限定单个CPU环境来说，Serial收集器由于没有现成交互的开销，单线程收集效率高。Serial对于运行Client模式下的虚拟机是一个很好的选择。
+
+### 2.4.2. ParNew收集器
+
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/ParNew.png?raw=true)
+
+### 2.4.3. Parallel Scavenge收集器
+
+
+### 2.4.4. Serial Old收集器
+
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/Serial%20Old.png?raw=true)
+
+### 2.4.5. Parallel Old收集器
+
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/Parallel%20Old.png?raw=true)
+
+### 2.4.6. CMS收集器
+
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/CMS.png?raw=true)
+
+### 2.4.7. G1收集器
+
+![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/G1.png?raw=true)
 
 
 
