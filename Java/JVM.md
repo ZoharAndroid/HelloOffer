@@ -406,20 +406,59 @@ ParNew是许多运行在Server模式下的虚拟机中首选的新生代收集�
 
 ### 2.4.3. Parallel Scavenge收集器
 
+Paraller Scavenge收集器是一个**新生代收集器**，使用**复制算法**的收集器，又是并行多线程收集器。于ParNew收集器相似，但是有什么差别呢？
+
+Paraller Scavenge收集器关注点是**吞吐量**（吞吐量就是运行用户代码的时间与CPU总消耗时间的比较值，也就是CPU的执行效率），CMS等收集器的关注点是尽可能的**缩短垃圾收集时用户线程的停顿时间**。
+
+Paraller Scavenge提供了两个参数用于精确控制吞吐量，最大垃圾收集停顿时间-XX:MaxGCPauseMillis和设置吞吐量大小-XX:GCTimeRation。
+
+Paraller Scavenge还提供了一个参数-XX:UseAdaptiveSizePolicy，虚拟机会自动提供合适的停顿时间和最大的量，这也是与ParNew的最大一个区别。 
 
 ### 2.4.4. Serial Old收集器
+
+Serial Old是Serial收集器的**老年代版本**，也是一个**单线程收集器**，使用**标记-整理算法**，主要给**Client模式**下的虚拟机使用。
+
+在Server模式下使用，有两个用途：1. JDK1.5及以前的版本中，与Paraller Scavenge搭配使用；2. 作为CMS收集器的后备预案。
 
 ![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/Serial%20Old.png?raw=true)
 
 ### 2.4.5. Parallel Old收集器
 
+Paraller Old是Paraller Scavenge的**老年代版本**，使用**多线程**和**标记-整理**算法。在注重吞吐量以及CPU资源的场合，都可以优先考虑 Parallel Scavenge 收集器和 Parallel Old 收集器。
+
 ![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/Parallel%20Old.png?raw=true)
 
 ### 2.4.6. CMS收集器
 
+**CMS收集器是一种以获取最短回收停顿时间为目标的收集器**。希望系统停顿时间短，以给用户带来较好的体验。是一种老年代收集器。
+
+CMS是基于**标记-清除**算法的，整个过程分为4个步骤：
+
+1. **初始标记**：仅仅只是标记一下GC Roots能直接关联到的对象，速度很快。
+2. **并发标记**：就是进行GC Roots Tracing的过程。
+3. **重新标记**：为了修正并发标记期间因用户程序继续运行而导致标记产生变动的那一部分对象的标记记录，这个阶段的停顿时间一般会比初始标记阶段稍长，但是远比并发标记的时间短。
+4. **并发清理**：对标记进行清理过程。
+
 ![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/CMS.png?raw=true)
 
+整个过程中耗时最长的并发标记和并发清除过程收集器线程都是可以与用户线程并发执行的。
+
+CMS虽有**并发收集、低停顿**的特点，但是也有3个明显的缺点：
+
+1. **对CPU资源非常敏感**。
+2. **无法处理浮动垃圾**（浮动垃圾：由于CMS并发清理阶段用户线程还在运行，自然就会有新的垃圾不断产生，这一部分垃圾出现在标记过程之后，CMS无法在当次收集中处理掉它们，只好留等到下一次GC时再清理掉）。
+3. CMS是一款基于标记-清除算法实现的收集器，所以**会产生大量的碎片**。
+
 ### 2.4.7. G1收集器
+
+G1收集器是一款**面型服务端应用的**垃圾收集器。
+
+与其他收集器相比，G1具有如下特点：
+
+* **并行与并发**：G1 能充分利用 CPU、多核环境下的硬件优势，使用多个 CPU（CPU 或者 CPU 核心）来缩短 Stop-The-World 停顿时间。部分其他收集器原本需要停顿 Java 线程执行的 GC 动作，G1 收集器仍然可以通过并发的方式让 java 程序继续执行。
+* **分代收集**：虽然 G1 可以不需要其他收集器配合就能独立管理整个 GC 堆，但是还是保留了分代的概念。
+* **空间整合**：G1从整体上看是基于标记-整理算法，从局部上看（两个Region之间）上看是基于复制算法。但是这两种算法都是不会产生空间碎片。
+* **可预测的停顿**：G1除了追求低停顿之外，还建立了可预测的停顿时间模型，
 
 ![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-6-17/G1.png?raw=true)
 
