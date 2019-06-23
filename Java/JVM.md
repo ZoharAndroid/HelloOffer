@@ -418,7 +418,7 @@ Paraller Scavenge收集器关注点是**吞吐量**（吞吐量就是运行用�
 
 Paraller Scavenge提供了两个参数用于精确控制吞吐量，最大垃圾收集停顿时间-XX:MaxGCPauseMillis和设置吞吐量大小-XX:GCTimeRation。
 
-Paraller Scavenge还提供了一个参数-XX:UseAdaptiveSizePolicy，虚拟机会自动提供合适的停顿时间和最大的量，这也是与ParNew的最大一个区别。 
+Paraller Scavenge还提供了一个参数-XX:UseAdaptiveSizePolicy，虚拟机会自动提供合适的停顿时间和最大的吞吐量，这也是与ParNew的最大一个区别。 
 
 ### 2.4.4. Serial Old收集器
 
@@ -511,7 +511,7 @@ eden 区、s0("From") 区、s1("To") 区都属于新生代，tentired 区属于�
 
 既然虚拟机采用了分代收集的思想来管理内存，那么内存回收时就必须能识别哪些对象应放在新生代，哪些对象应放在老年代。为了做到这点，虚拟机给每个对象定义了一个**对象年龄计数器**。
 
-**如果对象在Eden出生并经过第一次Minor GC后仍然存活，并且能够被Survivor容纳的话，将被移动到Survivor空间中，并且对象年龄设为1，对象在 Survivor 中每熬过一次 Minor GC,年龄就增加 1 岁，当它的年龄增加到一定程度（默认为 15 岁），就会被晋升到老年代中。对象晋升到老年代的年龄阈值，可以通过参数 -XX:MaxTenuringThreshold 来设置。
+**如果对象在Eden出生并经过第一次Minor GC后仍然存活，并且能够被Survivor容纳的话，将被移动到Survivor空间中，并且对象年龄设为1，对象在 Survivor 中每熬过一次 Minor GC,年龄就增加 1 岁，当它的年龄增加到一定程度（默认为 15 岁），就会被晋升到老年代中**。对象晋升到老年代的年龄阈值，可以通过参数 -XX:MaxTenuringThreshold 来设置。
 
 ### 2.5.4. 动态对象年龄判定
 
