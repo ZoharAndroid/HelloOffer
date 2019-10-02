@@ -1,40 +1,40 @@
 
-- [1. 数据类型](#1-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
-  - [1.1 基本类型](#11-%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
-  - [1.2 缓存池](#12-%E7%BC%93%E5%AD%98%E6%B1%A0)
-- [2 String](#2-string)
-  - [2.1 String类的源码](#21-string%E7%B1%BB%E7%9A%84%E6%BA%90%E7%A0%81)
-  - [2.2 String/StringBuilder/StringBuffer](#22-stringstringbuilderstringbuffer)
-    - [2.2.1 StringBuilder/StringBuffer的源码](#221-stringbuilderstringbuffer%E7%9A%84%E6%BA%90%E7%A0%81)
-    - [2.2.2 比较](#222-%E6%AF%94%E8%BE%83)
-    - [2.3 String Pool](#23-string-pool)
-  - [2.4 new String("abc")方法：](#24-new-string%22abc%22%E6%96%B9%E6%B3%95)
-- [3 运算相关问题](#3-%E8%BF%90%E7%AE%97%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98)
-  - [3.1 参数传递](#31-%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92)
-  - [3.2 float与double](#32-float%E4%B8%8Edouble)
-  - [3.3 隐士类型转换](#33-%E9%9A%90%E5%A3%AB%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2)
-  - [3.4 switch](#34-switch)
-- [4 继承](#4-%E7%BB%A7%E6%89%BF)
-- [5 Object相关混淆点](#5-object%E7%9B%B8%E5%85%B3%E6%B7%B7%E6%B7%86%E7%82%B9)
-  - [5.1 equals方法](#51-equals%E6%96%B9%E6%B3%95)
-  - [5.2 clone方法](#52-clone%E6%96%B9%E6%B3%95)
-- [6. 构造器Constructor是否可以被override？](#6-%E6%9E%84%E9%80%A0%E5%99%A8constructor%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%A2%ABoverride)
-- [7. 重载和重写的区别？](#7-%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB)
-- [8. 封装、继承和多态](#8-%E5%B0%81%E8%A3%85%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81)
-- [9. 静态方法内调用一个非静态成员为什么是非法的？](#9-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%86%85%E8%B0%83%E7%94%A8%E4%B8%80%E4%B8%AA%E9%9D%9E%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%9E%E6%B3%95%E7%9A%84)
-- [10. 抽象类和接口的区别？](#10-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB)
-- [11. 成员变量和局部变量的区别？](#11-%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB)
-- [12. 对象实体和对象引用？](#12-%E5%AF%B9%E8%B1%A1%E5%AE%9E%E4%BD%93%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8)
-- [13. Java中只有值传递，没有引用传递。](#13-java%E4%B8%AD%E5%8F%AA%E6%9C%89%E5%80%BC%E4%BC%A0%E9%80%92%E6%B2%A1%E6%9C%89%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92)
-- [14. 线程、进程和程序的简单概念和联系？](#14-%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%AE%80%E5%8D%95%E6%A6%82%E5%BF%B5%E5%92%8C%E8%81%94%E7%B3%BB)
-- [15. final关键字总结](#15-final%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93)
-- [16. static关键字总结](#16-static%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93)
-- [17. this、super关键字总结](#17-thissuper%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93)
-- [18. 关于自动装箱、拆箱的一个代码思考？](#18-%E5%85%B3%E4%BA%8E%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E6%8B%86%E7%AE%B1%E7%9A%84%E4%B8%80%E4%B8%AA%E4%BB%A3%E7%A0%81%E6%80%9D%E8%80%83)
+- [1. 数据类型](#1-%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b)
+  - [1.1. 基本类型](#11-%e5%9f%ba%e6%9c%ac%e7%b1%bb%e5%9e%8b)
+  - [1.2. 缓存池](#12-%e7%bc%93%e5%ad%98%e6%b1%a0)
+- [2. String](#2-string)
+  - [2.1. String类的源码](#21-string%e7%b1%bb%e7%9a%84%e6%ba%90%e7%a0%81)
+  - [2.2. String/StringBuilder/StringBuffer](#22-stringstringbuilderstringbuffer)
+    - [2.2.1. StringBuilder/StringBuffer的源码](#221-stringbuilderstringbuffer%e7%9a%84%e6%ba%90%e7%a0%81)
+    - [2.2.2. 比较](#222-%e6%af%94%e8%be%83)
+    - [2.2.3. String Pool](#223-string-pool)
+  - [2.3. new String("abc")方法](#23-new-string%22abc%22%e6%96%b9%e6%b3%95)
+- [3. 运算相关问题](#3-%e8%bf%90%e7%ae%97%e7%9b%b8%e5%85%b3%e9%97%ae%e9%a2%98)
+  - [3.1. 参数传递](#31-%e5%8f%82%e6%95%b0%e4%bc%a0%e9%80%92)
+  - [3.2. float与double](#32-float%e4%b8%8edouble)
+  - [3.3. 隐式类型转换](#33-%e9%9a%90%e5%bc%8f%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2)
+  - [3.4. switch](#34-switch)
+- [4. 继承](#4-%e7%bb%a7%e6%89%bf)
+- [5. Object相关混淆点](#5-object%e7%9b%b8%e5%85%b3%e6%b7%b7%e6%b7%86%e7%82%b9)
+  - [5.1. equals方法](#51-equals%e6%96%b9%e6%b3%95)
+  - [5.2. clone方法](#52-clone%e6%96%b9%e6%b3%95)
+- [6. 构造器Constructor是否可以被override](#6-%e6%9e%84%e9%80%a0%e5%99%a8constructor%e6%98%af%e5%90%a6%e5%8f%af%e4%bb%a5%e8%a2%aboverride)
+- [7. 重载和重写的区别](#7-%e9%87%8d%e8%bd%bd%e5%92%8c%e9%87%8d%e5%86%99%e7%9a%84%e5%8c%ba%e5%88%ab)
+- [8. 封装、继承和多态](#8-%e5%b0%81%e8%a3%85%e7%bb%a7%e6%89%bf%e5%92%8c%e5%a4%9a%e6%80%81)
+- [9. 静态方法内调用一个非静态成员为什么是非法的](#9-%e9%9d%99%e6%80%81%e6%96%b9%e6%b3%95%e5%86%85%e8%b0%83%e7%94%a8%e4%b8%80%e4%b8%aa%e9%9d%9e%e9%9d%99%e6%80%81%e6%88%90%e5%91%98%e4%b8%ba%e4%bb%80%e4%b9%88%e6%98%af%e9%9d%9e%e6%b3%95%e7%9a%84)
+- [10. 抽象类和接口的区别](#10-%e6%8a%bd%e8%b1%a1%e7%b1%bb%e5%92%8c%e6%8e%a5%e5%8f%a3%e7%9a%84%e5%8c%ba%e5%88%ab)
+- [11. 成员变量和局部变量的区别](#11-%e6%88%90%e5%91%98%e5%8f%98%e9%87%8f%e5%92%8c%e5%b1%80%e9%83%a8%e5%8f%98%e9%87%8f%e7%9a%84%e5%8c%ba%e5%88%ab)
+- [12. 对象实体和对象引用](#12-%e5%af%b9%e8%b1%a1%e5%ae%9e%e4%bd%93%e5%92%8c%e5%af%b9%e8%b1%a1%e5%bc%95%e7%94%a8)
+- [13. Java中只有值传递，没有引用传递](#13-java%e4%b8%ad%e5%8f%aa%e6%9c%89%e5%80%bc%e4%bc%a0%e9%80%92%e6%b2%a1%e6%9c%89%e5%bc%95%e7%94%a8%e4%bc%a0%e9%80%92)
+- [14. 线程、进程和程序的简单概念和联系](#14-%e7%ba%bf%e7%a8%8b%e8%bf%9b%e7%a8%8b%e5%92%8c%e7%a8%8b%e5%ba%8f%e7%9a%84%e7%ae%80%e5%8d%95%e6%a6%82%e5%bf%b5%e5%92%8c%e8%81%94%e7%b3%bb)
+- [15. final关键字总结](#15-final%e5%85%b3%e9%94%ae%e5%ad%97%e6%80%bb%e7%bb%93)
+- [16. static关键字总结](#16-static%e5%85%b3%e9%94%ae%e5%ad%97%e6%80%bb%e7%bb%93)
+- [17. this、super关键字总结](#17-thissuper%e5%85%b3%e9%94%ae%e5%ad%97%e6%80%bb%e7%bb%93)
+- [18. 关于自动装箱、拆箱的一个代码思考](#18-%e5%85%b3%e4%ba%8e%e8%87%aa%e5%8a%a8%e8%a3%85%e7%ae%b1%e6%8b%86%e7%ae%b1%e7%9a%84%e4%b8%80%e4%b8%aa%e4%bb%a3%e7%a0%81%e6%80%9d%e8%80%83)
 
 # 1. 数据类型
 
-## 1.1 基本类型
+## 1.1. 基本类型
 
 * byte：8
 * char：16
@@ -45,14 +45,14 @@
 * double：64
 * boolean：JVM没有明确规定大小。JVM在编译期间将boolean类型数据转换成int类型，1代表true，0表示false。
 
-## 1.2 缓存池
+## 1.2. 缓存池
 
 `new Integer(123)` 和 `Integer.valueOf(123)` 的区别？
 
 * new Integer(123)每次都会创建一个新的对象；
 * Integer.valueOf(123)会调用缓存池中的对象，多次调用会取得同一个对象的引用。
   
-```
+```java
         Integer x = new Integer(123);
         Integer y = new Integer(123);
         System.out.println( x == y); // false
@@ -63,7 +63,8 @@
 ```
 
 valueOf()方法首先会判断i是否在缓存池中，如果在的话就会直接返回缓存池中的内容，如果没有，就会用new Integer（）创建一个新的对象。
-```
+
+```java
 public static Integer valueOf(int i) {
         if (i >= IntegerCache.low && i <= IntegerCache.high)
         // 判断是否在缓存池范围中，如果在，则返回缓存池中的内容
@@ -72,8 +73,9 @@ public static Integer valueOf(int i) {
     }
 ```
 
-看下IntegerCache的代码
-```
+看下IntegerCache的代码：
+
+```java
 private static class IntegerCache {
         static final int low = -128;
         static final int high;
@@ -114,7 +116,7 @@ private static class IntegerCache {
 
 测试代码：
 
-```
+```java
         Integer m = 127;// 编辑器会在自动装箱过程调用ValueOf方法
         Integer n = 127;
         System.out.println(m == n); // true
@@ -124,10 +126,11 @@ private static class IntegerCache {
         System.out.println( a == b); // false
 ```
 
-# 2 String
+# 2. String
 
-## 2.1 String类的源码
-```
+## 2.1. String类的源码
+
+```java
 public final class String
     implements java.io.Serializable, Comparable<String>, CharSequence {
         // The value is used for character storage，用字节数组进行存储
@@ -136,16 +139,18 @@ public final class String
         private final byte coder;
     }
 ```
+
 > 1. String内部用字节数组来存储字符串，使用coder来标识编码
 > 2. String类被final声明，说明String类不可以被继承
 > 3. value[]数组被final声明，说明value []数组被初始化之后，不可以改变。
 
-## 2.2 String/StringBuilder/StringBuffer
+## 2.2. String/StringBuilder/StringBuffer
 
-### 2.2.1 StringBuilder/StringBuffer的源码
+### 2.2.1. StringBuilder/StringBuffer的源码
 
 StringBuilder源码：
-```
+
+```java
 public final class StringBuilder
     extends AbstractStringBuilder
     implements java.io.Serializable, CharSequence {  
@@ -156,7 +161,8 @@ public final class StringBuilder
 ```
 
 StringBuffer源码：
-```
+
+```java
 public final class StringBuffer
     extends AbstractStringBuilder
     implements java.io.Serializable, CharSequence{
@@ -165,10 +171,12 @@ public final class StringBuffer
     }
 }
 ```
+
 > 可以看到StringBuffer和StringBuilder都是继承了AbstractStringBuilder这个抽象类，下面看下这个AbstractStringBuilder主要是什么内容。
 
 AbstractStringBuilder源码：
-```
+
+```java
 abstract class AbstractStringBuilder implements Appendable, CharSequence {
     /**
      * The value is used for character storage.
@@ -180,26 +188,30 @@ abstract class AbstractStringBuilder implements Appendable, CharSequence {
      */
     byte coder;
 ```
+
 > 这里也定义了字节数组和coder编码方式。但是没有用final声明。
 
-### 2.2.2 比较
+### 2.2.2. 比较
 
-1. 可变性
-   * String有final修饰，说明不可变
-   * StringBuffer和StringBuilder，是可变的
+1. 可变性：
+   * `String`源码中的字节数组有final修饰，说明不可变；
+   * `StringBuffer`和`StringBuilder`源码中可以看到，都是继承的`AbstractStringBuilder`，而`AbstractStringBuilder`中的字节数组没有final修饰，所以是可变的；
   
-2. 线程安全
-   * String不可变，说明线程安全
-   * StringBuilder，线程不安全
-   * StringBuffer，线程安全，源码可以看出（方法都用synchronized来声明，比如charAt()方法：`public synchronized char charAt(int index) {
-        return super.charAt(index);
-    }`)
+2. 线程安全：
+   * `String`不可变，说明线程安全；
+   * `StringBuilder`，线程不安全；
+   * `StringBuffer`，线程安全，源码可以看出（方法都用synchronized来声明，比如charAt()方法：
+    ```java
+        public synchronized char charAt(int index) {
+            return super.charAt(index);
+        })
+    ```
 
-
-### 2.3 String Pool
+### 2.2.3. String Pool
 
 String Pool保存着所有字符串的字面量。下面看个例子：
-```
+
+```java
 public static void main(String[] args){
         String a = new String("abc");
         String b = new String("abc");
@@ -211,10 +223,12 @@ public static void main(String[] args){
         System.out.println( x + "  " + y);// abc  abc
     }
 ```
+
 > a 和 b 用new创建一个字符串对象，如果直接用两个对象进行比较，肯定是不相等的，地址不一样。而调用了`intern()`方法后，x==y说明这两个字符串对象指向的是同一个地址，也就是说明了，intern()方法首先把 a 引用的字符串放到 String Pool 中，然后返回这个字符串引用。因此 x 和 y 引用的是同一个字符串。
 
 看下`intern()`方法的源码:
-```
+
+```java
 /**
      * Returns a canonical representation for the string object.
      * <p>
@@ -241,35 +255,40 @@ public static void main(String[] args){
      */
     public native String intern();
 ```
+
 > 这代码的解释也说明了，当String Pool中包含了字符串的值，那么就直接返回该值，如果没有，这个字符串就会添加到String Pool中然后再返回这个值。
 
-
 如果直接采用字符串直接赋值的方式，就会自动将字符串放入String Pool中
-```
+
+```java
         String m = "aaa";
         String n = "aaa";
         System.out.println(m == n); // true
 ```
 
-## 2.4 new String("abc")方法：
+## 2.3. new String("abc")方法
+
 源代码：
-```
+
+```java
 public String(String original) {
         this.value = original.value;
         this.coder = original.coder;
         this.hash = original.hash;
     }
 ```
+
 > `new String("abc")`并不是直接赋值一个字符串，而是将value变量指向原来的(original)value数组。
 
-# 3 运算相关问题
+# 3. 运算相关问题
 
-## 3.1 参数传递
+## 3.1. 参数传递
 
 Java方法中参数的传递是**值传递**，而不是引用传递。
 
 下面看个例子来说明是值传递。
-```
+
+```java
 public class chapter3_1 {
 
     static class Dog {
@@ -313,105 +332,112 @@ public class chapter3_1 {
     }
 }
 ```
+
 > 可见，Dog("A")的对象dog传递给fun方法相当于一个指针变量，所以fun方法中的第一个println打印的地址和main方法中打印的地址是一样的。当fun函数让形参dog重新指向新的对象的时候Dog("B")，第二个println打印就是一个新的地址。在main()函数中虽然经过了fun方法，让dog重新指向新的地址，但是fun方法一结束，新指向的地址变量也就销毁了，main方法中的dog对象在程序后面还在使用，所以并不会销毁，所以还是指向原来的地址。
 
-```
+```java
 public static void main(String[] args){
         Dog dog = new Dog("A");
         fun(dog);
         System.out.println(dog.getName());// B
-
-
     }
 
     private static void fun(Dog dog){
         dog.setName("B");
     }
 ```
+
 > 经过上面的分析，也就可以知道fun方法修改dog对象子段在main方法中为什么输出的是B啦。因为改变的是同一个地址指向的内容。
 
-## 3.2 float与double
+## 3.2. float与double
 
-Java不能隐士向下转型，因为会降低精度。
+Java不能隐式向下转型，因为会降低精度。
 
-```
+```java
 float f = 1.1;
 ```
+
 ![](https://github.com/ZoharAndroid/MarkdownImages/blob/master/2019-3-31/float%20and%20doble.png?raw=true)
+
 > 这里会报错，1.1属于doble类型，是不能直接从double赋值给float，因为是向下转型。
 > 如果要解决的话，就需要显示定义`float f = 1.1f;`
 
-## 3.3 隐士类型转换
+## 3.3. 隐式类型转换
 
-```
+```java
 short s1 = 1;
 // s1 = s1 + 1; 这里会进行报错，因为s1 + 1 是int类型 而s1是short类型，所以不能向下转型。
 ```
+
 > 如果要处理必须修改为`s1 = (short) (s1+1);`
 
-## 3.4 switch
+## 3.4. switch
 
 switch是不支持long类型的比较的。
-```
+
+```java
  long x = 111;
-        switch (x){ // Incompatible types. Found: 'long', required: 'char, byte, short, int, Character, Byte, Short, Integer, String, or an enum'
-            case 111:
-                break;
-            case 222:
-                break;
-        }
+ switch (x){ // Incompatible types. Found: 'long', required: 'char, byte, short, int, Character, Byte, Short, Integer, String, or an enum'
+    case 111:
+        break;
+    case 222:
+        break;
+}
 ```
+
 > 这里会提示，switch是无法比较long类型的变量的。
 
-# 4 继承
+# 4. 继承
 
 一个值得思考的题目
-```
+
+```java
 static class A{
-        public String show(D obj){
-            return "A and D";
-        }
-
-        public String show(A obj){
-            return "A and A";
-        }
+    public String show(D obj){
+        return "A and D";
     }
 
-    static class B extends A{
-        public String show(B obj){
-            return "B and B";
-        }
+    public String show(A obj){
+        return "A and A";
+    }
+}
 
-        public String show(A obj){
-            return "B and A";
-        }
+static class B extends A{
+    public String show(B obj){
+        return "B and B";
     }
 
-    static class C extends B{
-
+    public String show(A obj){
+        return "B and A";
     }
+}
 
-    static class D extends B{
+static class C extends B{
 
-    }
+}
 
+static class D extends B{
 
-    public static void main(String[] args){
-        A a1 = new A();
-        A a2 = new B();
-        B b = new B();
-        C c = new C();
-        D d = new D();
-        System.out.println(a1.show(b));// A and A
-        System.out.println(a1.show(c));// A and A
-        System.out.println(a1.show(d));// A and D
-        System.out.println(a2.show(b));// B and A，这里需要注意的是要找父类的全部方法和子类共同的方法，就好理解了
-        System.out.println(a2.show(c));// B and A，同上面的理解
-        System.out.println(a2.show(d));// A and D，同上面的理解
-        System.out.println(b.show(b));// B and B
-        System.out.println(b.show(c));// B and B
-        System.out.println(b.show(d));// A and D
+}
+
+public static void main(String[] args){
+    A a1 = new A();
+    A a2 = new B();
+    B b = new B();
+    C c = new C();
+    D d = new D();
+    System.out.println(a1.show(b));// A and A
+    System.out.println(a1.show(c));// A and A
+    System.out.println(a1.show(d));// A and D
+    System.out.println(a2.show(b));// B and A，这里需要注意的是要找父类的全部方法和子类共同的方法，就好理解了
+    System.out.println(a2.show(c));// B and A，同上面的理解
+    System.out.println(a2.show(d));// A and D，同上面的理解
+    System.out.println(b.show(b));// B and B
+    System.out.println(b.show(c));// B and B
+    System.out.println(b.show(d));// A and D
+}
 ```
+
 > 涉及到重写时，方法调用的优先级为：
 >  * this.show(O)
 >  * super.show(O)
@@ -420,25 +446,30 @@ static class A{
 > 参数相同，首先寻找自己本地方法看是否有匹配的，如果没有再寻找父类的相同的方法；
 > 参数为父类对象的时候，也是寻找自己类本类的方法，然后在寻找父类中的方法。
 
-# 5 Object相关混淆点
+这上面的例子中涉及到一个**多态**的概念，A是B的父类，a2就是一个向上转型到父类，这样就是使用父类类型的引用来指向子类对象，**因此这个a2引用就可以调用父类的所有属性和方法，并且只能调用子类中重写父类的方法**。如果a2调用了父类和子类相同名称的方法时候，也就直接调用的是子类重写的方法，而不是父类的那个方法。
 
-## 5.1 equals方法
+# 5. Object相关混淆点
+
+## 5.1. equals方法
 
 先看下equals源码：
-```
+
+```java
 public boolean equals(Object obj) {
         return (this == obj);
     }
 ```
+
 > equals源码就是实现了两个对象实体进行比较。
 
-实现以下要求：
-* 检查是否为同一个对象的引用，如果是返回true
-* 检查是否为同一个类型，如果不是返回false
-* 将Object对象进行转型
-* 判断每个关键域是否相等
+重写equals方法的步骤（要求）如下：
 
-```
+1. 检查是否为同一个对象的引用，如果是返回true；
+2. 检查是否为同一个类型，如果不是返回false；
+3. 将Object对象进行转型；
+4. 判断每个关键域是否相等；
+
+```java
  class EqualsExample{
         private int x;
         private int y;
@@ -452,28 +483,29 @@ public boolean equals(Object obj) {
 
         @Override
         public boolean equals(Object obj) {
+            // 1. 判断引用是否相同
             if (this == obj){
                 return true;
             }
-
+            // 2. 类型是否相同
             if (obj == null || obj.getClass() != this.getClass()){
                 return false;
             }
-
+            // 3. 强转
             EqualsExample that = (EqualsExample)obj;
-
+            // 4. 每个关键域是否相同
             if (this.x != that.x) return  false;
             if (this.y != that.y) return false;
             return this.z == that.z;
-
         }
     }
 ```
 
-## 5.2 clone方法
+## 5.2. clone方法
 
 复制方法：在一个构造方法中进行复制内容（深拷贝）
-```$xslt
+
+```java
 public class CloneConstructorExample {
 
     private int[] arr;
@@ -522,28 +554,28 @@ public class CloneConstructorExample {
 浅拷贝：就是复制的和原始的对象都是指向同一个地址，也就是同一个内容的不同引用。
 > 其方法就是重新clone方法，然后实现cloneable接口即可。
 
-# 6. 构造器Constructor是否可以被override？
+# 6. 构造器Constructor是否可以被override
 
 父类的私有属性和构造方法是不能被继承的，所以，构造方法是不能被override重写的；但是构造方法是可以进行重载的，可以看到很多类中都重载了构造方法。
 
-# 7. 重载和重写的区别？
+# 7. 重载和重写的区别
 
-* 重载：一个类中包含了多个方法名相同，但是参数个数/参数类型/参数顺序不同。对于返回值和访问修饰可以不相同。
+* 重载：一个类中包含了多个方法名相同，但是**参数个数/参数类型/参数顺序不同**。对于**返回值和访问修饰**可以不相同。
 * 重写：发生在父子类中，方法名和参数名、参数类型、参数顺序必须相同，返回值类型小于等于父类，访问修饰符大于等于父类。如果父类的方法访问修饰符为private，那么子类就不能重写该方法。
 
 # 8. 封装、继承和多态
 
-* 封装：是指一种将抽象性函式接口的实现细节部份包装、隐藏起来的方法。 
+* 封装：是指一种将抽象性函式接口的实现细节部份包装、隐藏起来的方法。
 * 继承：子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。
 **继承注意点：**
     子类拥有父类的所有属性和方法（包括私有属性和方法），但是对于父类的私有属性和方法是无法进行访问的。
 * 多态：同一个行为具有多个不同表现形式或形态的能力。
 
-# 9. 静态方法内调用一个非静态成员为什么是非法的？
+# 9. 静态方法内调用一个非静态成员为什么是非法的
 
 静态方法可以通过类名直接调用，不用再新建对象来调用。因此在静态方法里，不能调用其他非静态变量。
 
-# 10. 抽象类和接口的区别？
+# 10. 抽象类和接口的区别
 
 1. 抽象类可以有构造方法，接口中不能有构造方法。
 2. 抽象类中可以有普通成员变量，接口中没有普通成员变量
@@ -553,21 +585,21 @@ public class CloneConstructorExample {
 6. 抽象类和接口中都可以包含静态成员变量，抽象类中的静态成员变量的访问类型可以任意，但接口中定义的变量只能是public static final类型，并且默认即为public static final类型。
 7. 一个类可以实现多个接口，但只能继承一个抽象类。
 
-# 11. 成员变量和局部变量的区别？
+# 11. 成员变量和局部变量的区别
 
 1. 成员变量属于类，局部变量属于方法或者方法的参数。
 2. 成员变量可以被public/private/static等进行修饰，局部变量不能被访问修饰符修饰和static所修饰；但是，成员变量和局部变量都可以用final进行修饰。
 3. 成员变量用static进行修饰，则属于类，随着类存在而存在，如果没有用static进行修饰，那么这个成员变量是属于对象的，随着对象的存在而存在。局部变量属于方法，随着方法的调用的结束而结束。
 4. 对象存在于堆内存，局部变量存在于栈内存。
-5. 成员变量如果没有赋初值，那么会自动以磨人的类型赋初值。局部变量则不会。
+5. 成员变量如果没有赋初值，那么会自动以默认的类型赋初值。局部变量则不会。
 
-# 12. 对象实体和对象引用？
+# 12. 对象实体和对象引用
 
 对象引用就是new出来后的引用名称，比如A a = new A; 那么，A是对象实体，a则是对象引用。对象实体存放在堆内存中，对象引用存放在栈内存中。
 
-# 13. Java中只有值传递，没有引用传递。
+# 13. Java中只有值传递，没有引用传递
 
-# 14. 线程、进程和程序的简单概念和联系？
+# 14. 线程、进程和程序的简单概念和联系
 
 * 线程：一个进程可以产生多个线程，线程共享一块内存空间和一组系统资源，所以系统在产生一个线程或者切换各个线程之间系统负担是比进程要小的。
 * 进程：简单来说就是运行的程序，是系统运行程序的基本单位。
@@ -591,7 +623,7 @@ public class CloneConstructorExample {
 * this：指的是对象本身。
 * super：指的是子类调用的父类对象，也就是父类对象。
 
-# 18. 关于自动装箱、拆箱的一个代码思考？
+# 18. 关于自动装箱、拆箱的一个代码思考
 
 ```java
 public class Main{
@@ -614,6 +646,7 @@ public static void main(String[] args){
     }
 }
 ```
+
 > 包装类的"=="运算在不遇到算术运算的情况下，不会自动拆箱;
 > equals()方法不处理数据转型
 
