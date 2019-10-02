@@ -9,6 +9,7 @@
     - [2.2.2. 比较](#222-%e6%af%94%e8%be%83)
     - [2.2.3. String Pool](#223-string-pool)
   - [2.3. new String("abc")方法](#23-new-string%22abc%22%e6%96%b9%e6%b3%95)
+  - [2.4. String a="abc"和String a = new String("abc")](#24-string-a%22abc%22%e5%92%8cstring-a--new-string%22abc%22)
 - [3. 运算相关问题](#3-%e8%bf%90%e7%ae%97%e7%9b%b8%e5%85%b3%e9%97%ae%e9%a2%98)
   - [3.1. 参数传递](#31-%e5%8f%82%e6%95%b0%e4%bc%a0%e9%80%92)
   - [3.2. float与double](#32-float%e4%b8%8edouble)
@@ -31,6 +32,7 @@
 - [16. static关键字总结](#16-static%e5%85%b3%e9%94%ae%e5%ad%97%e6%80%bb%e7%bb%93)
 - [17. this、super关键字总结](#17-thissuper%e5%85%b3%e9%94%ae%e5%ad%97%e6%80%bb%e7%bb%93)
 - [18. 关于自动装箱、拆箱的一个代码思考](#18-%e5%85%b3%e4%ba%8e%e8%87%aa%e5%8a%a8%e8%a3%85%e7%ae%b1%e6%8b%86%e7%ae%b1%e7%9a%84%e4%b8%80%e4%b8%aa%e4%bb%a3%e7%a0%81%e6%80%9d%e8%80%83)
+- [19. 手写String中的equals方法](#19-%e6%89%8b%e5%86%99string%e4%b8%ad%e7%9a%84equals%e6%96%b9%e6%b3%95)
 
 # 1. 数据类型
 
@@ -279,6 +281,12 @@ public String(String original) {
 ```
 
 > `new String("abc")`并不是直接赋值一个字符串，而是将value变量指向原来的(original)value数组。
+
+## 2.4. String a="abc"和String a = new String("abc")
+
+* String a ="abc"通过赋值得到是一个字符串常量，存在常量池中，如果常量池中原来就有该字符串常量，那么就直接返回，如果没有，那么先存入常量池，然后返回；
+* new String("abc")是创建一个String对象，在堆内存中开辟空间进行存储。
+
 
 # 3. 运算相关问题
 
@@ -650,8 +658,41 @@ public static void main(String[] args){
 > 包装类的"=="运算在不遇到算术运算的情况下，不会自动拆箱;
 > equals()方法不处理数据转型
 
+# 19. 手写String中的equals方法
+
+```java
+ public boolean equals(Object obj) {
+        // 1. 引用是否相同
+        if (this == obj) {
+            return true;
+        }
+        // 2. 判断类型是否相同
+        if (obj != null && obj instanceof String) {
+            // 3. 强制转换
+            String anotherString = (String) obj;
+            // 4. 判断内部是否相同
+            int n = value.length; // value是String源码中保存字符的数组
+            if (n == anotherString.value.length) {
+                int i = 0;
+                char[] v1 = value;
+                char[] v2 = antherString.value;
+                while (n-- != 0) {
+                    if (v1[i] != v2[i]) {
+                        return false;
+                    }
+                    i++;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+```
+
+
 ---
 参考资料：
 
 1. [CyC2018](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Java%20%E5%9F%BA%E7%A1%80.md)
 2. [JavaGuide](https://github.com/Snailclimb/JavaGuide)
+3. [Java基础问题](https://juejin.im/post/5c209718e51d451be35e3e70)
