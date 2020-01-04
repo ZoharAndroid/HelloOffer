@@ -1,3 +1,5 @@
+package leetcode;
+
 //427.建立四叉树
 public class _427 {
 

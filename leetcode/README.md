@@ -26,6 +26,7 @@
 [429][429]|[N叉树的层序遍历][429]|10|简单
 [427][427]|[建立四叉树][427]|4|简单
 [415][415]|[字符串相加][415]|27|简单
+[229][229]|[猜数字游戏][229]|5|简单
 [217][217]|||简单
 [206][206]| ||简单
 [205][205]| ||简单
@@ -44,7 +45,7 @@
 [166][166]| ||简单
 [155][155]| ||简单
 
-
+[229]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_229.java
 [459]:https://github.com/ZoharAndroid/LeetCode/blob/master/_459.java 
 [458]:https://github.com/ZoharAndroid/LeetCode/blob/master/_458.java 
 [455]:https://github.com/ZoharAndroid/LeetCode/blob/master/_455.java 
