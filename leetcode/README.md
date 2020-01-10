@@ -12,6 +12,8 @@
 
 序号|名称|执行用时(ms)|等级
 |:-------:|:-----------------------------:|:--:|:-:|
+[492][492]|[构造矩形][492]||简单
+[482][482]|[密钥格式化][482]||简单
 [476][476]|[数字的补数][476]||简单
 [475][475]|[供暖器][475]||简单
 [463][463]|[岛屿的周长][463]||简单
@@ -50,6 +52,8 @@
 [166][166]| ||简单
 [155][155]| ||简单
 
+[492]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_492.java
+[482]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_482.java
 [476]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_476.java
 [475]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_475.java
 [463]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_463.java
