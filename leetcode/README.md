@@ -12,6 +12,7 @@
 
 序号|名称|执行用时(ms)|等级
 |:-------:|:-----------------------------:|:--:|:-:|
+[476][476]|[数字的补数][476]||简单
 [475][475]|[供暖器][475]||简单
 [463][463]|[岛屿的周长][463]||简单
 [461][461]|[汉明距离][461]||简单
@@ -49,6 +50,7 @@
 [166][166]| ||简单
 [155][155]| ||简单
 
+[476]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_476.java
 [475]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_475.java
 [463]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_463.java
 [461]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_461.java
