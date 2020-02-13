@@ -12,6 +12,7 @@
 
 序号|名称|执行用时(ms)|等级
 |:-------:|:-----------------------------:|:--:|:-:|
+[500][500]|[键盘行][500]||简单
 [496][496]|[下一个更大元素][496]||简单
 [492][492]|[构造矩形][492]||简单
 [482][482]|[密钥格式化][482]||简单
@@ -53,6 +54,7 @@
 [166][166]| ||简单
 [155][155]| ||简单
 
+[500]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_500.java
 [496]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_496.java
 [492]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_492.java
 [482]:https://github.com/ZoharAndroid/HelloOffer/blob/master/leetcode/_482.java
