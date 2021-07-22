@@ -139,6 +139,21 @@ select distinct product_type from product;
 
 > 如果数据包含null，那么合并呈一条。
 
+### 查询结果剔除多列重复数据
 
+```sql
+e.g.
+ select distinct reigst_date,product_type from product;
+```
 
+> 只有多列的数据同时与另外行的数据相同才会剔除。
+> distinct关键字只能用于第一个列名之后。
+
+### where筛选
+
+```sql
+select <列名1>,<列名2> from <表名> where <条件>;
+e.g.
+select product_name, product_type from product where product_type='衣服';
+```
 
