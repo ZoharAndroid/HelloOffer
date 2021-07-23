@@ -59,7 +59,7 @@ primary key(product_id)
 
 ```sql
 drop table <表名>;
-e.g. drop table product;s
+e.g. drop table product;
 ```
 
 ## 表中增加列
@@ -156,4 +156,60 @@ select <列名1>,<列名2> from <表名> where <条件>;
 e.g.
 select product_name, product_type from product where product_type='衣服';
 ```
+
+### 算术运算符
+
+算术运算符包括“ + - * /”。
+
+```sql
+e.g.
+select product_name,sale_price,sale_price * 2 as "sale_price *2" from product;
+```
+
+> 注意：
+> Null，包含null计算的结果，结果都是null。包括 null/0=null。
+
+### 比较运算符
+
+#### 等于 =
+
+```sql
+e.g.
+select product_name,product_type from product where sale_price=500;
+```
+
+#### 不等于 <>/!=
+
+```sql
+select product_name,product_type from product where sale_price <> 500;
+select product_name,product_type from product where sale_price != 500;
+```
+
+#### 大于等于>=
+
+```sql
+select product_name,product_type,sale_price from product where sale_price >=1000;
+```
+
+#### 小于
+
+```sql
+select product_name,product_type,sale_price from product where reigst_date < '2009-09-27';
+```
+
+#### is null和is not null
+
+```sql
+select product_name,purchase_price from product where purchase_price is null;
+select product_name,purchase_price from product where purchase_price is not null;
+```
+
+### 比较和算术结合
+
+```sql
+select product_name,sale_price,purchase_price from product where sale_price - purchase_price >=500;
+```
+
+### 逻辑运算符
+
 
