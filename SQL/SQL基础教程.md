@@ -212,4 +212,16 @@ select product_name,sale_price,purchase_price from product where sale_price - pu
 
 ### 逻辑运算符
 
+#### not
 
+```sql
+select product_name, product_type, sale_price from product where not sale_price >=1000;
+```
+
+#### and/or
+
+```sql
+select product_name, purchase_price from product where product_type='厨房用品' and sale_price >= 300;
+select product_name, purchase_price from product where product_type='厨房用品' or sale_price >= 300;
+select * from product where product_type = '办公用品' and (reigst_date = '2009-09-11' or reigst_date = '2009-09-20');
+```
