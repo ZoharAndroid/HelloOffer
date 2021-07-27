@@ -225,3 +225,55 @@ select product_name, purchase_price from product where product_type='厨房用�
 select product_name, purchase_price from product where product_type='厨房用品' or sale_price >= 300;
 select * from product where product_type = '办公用品' and (reigst_date = '2009-09-11' or reigst_date = '2009-09-20');
 ```
+
+### 聚合函数
+
+```sql
+min:列中数据的最小值 select max(sale_price) from product;
+max:列中数据的最大值 select min(sale_price) from product;
+avg:列中数据的平均值 select avg(sale_price) from product;
+sum:列中数据的和 select sum(sale_price) from product;
+count:计算列数  select count(*) from product;
+```
+
+### 删除重复值再使用聚合函数
+
+```sql
+select count(distinct product_type) from product;
+```
+
+### insert
+
+```sql
+insert into <表名> (列1，列2，列3....) values (值1，值2，值3...);
+insert into productins values('0001','T恤衫','衣服',1000,500);
+insert into productins values('0002','打孔器','办公用品',500,320,'2009-09-11');
+insert into productins values('0003','运动T恤衫','衣服',4000,2800,null);
+insert into productins values('0004','菜刀','厨房用品',3000,2800,'2009-09-20');
+```
+
+### 插入默认值
+
+```sql
+create table productins (
+product_id char(4) not null,
+product_name varchar(100) not null,
+product_type varchar(32) not null,
+sale_price integer default 0, -- 创建表时设置了默认值
+purchase_price integer,
+regist_date date,
+primary key (product_id));
+```
+
+```sql
+--显示方式
+insert into productins values ('0007','擦菜板','厨房用品',default,790,'2009-04-28');
+-- 隐士方式：默认值该列不赋值，其他列都赋值
+insert into productins (product_id,product_name,product_type,purchase_price,regist_date) values('0008','圆珠笔','办公用品',100,'2009-03-10');
+```
+
+### insert...select从其他表中复制数据
+
+```sql
+insert into productinsCopy select * from productins;
+```
